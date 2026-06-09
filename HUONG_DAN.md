@@ -15,26 +15,55 @@ Website mẫu: https://huantranubc.github.io/huan-research-site/
 
 # 1. Cài đặt công cụ (làm một lần)
 
-Trên máy Mac, mở **Terminal** và cài ba công cụ.
+Cần ba công cụ: Quarto, Git, GitHub CLI.
+
+## 1a. Trên macOS
+
+Mở **Terminal**.
 
 ```bash
 # Homebrew (trình quản lý cài đặt) — bỏ qua nếu đã có
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Quarto (dựng website từ file văn bản)
+# Quarto, Git, GitHub CLI
 brew install --cask quarto
-
-# Git và GitHub CLI (đưa website lên mạng)
 brew install git gh
 ```
 
-Kiểm tra:
+## 1b. Trên Windows
+
+Mở **PowerShell** (gõ "PowerShell" ở menu Start). Windows 10 và 11 có sẵn lệnh
+`winget`.
+
+```powershell
+winget install --id Quarto.Quarto -e
+winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+```
+
+Nếu máy không có `winget`, tải bộ cài trực tiếp:
+
+- Quarto: https://quarto.org/docs/get-started/
+- Git: https://git-scm.com/download/win
+- GitHub CLI: https://cli.github.com/
+
+Sau khi cài, **đóng và mở lại PowerShell** để nhận lệnh mới.
+
+## 1c. Kiểm tra (cả hai hệ điều hành)
 
 ```bash
 quarto --version
 git --version
 gh --version
 ```
+
+> Khác biệt cần nhớ khi dùng Windows:
+>
+> - Dùng **PowerShell**, không phải Terminal.
+> - Nối hai lệnh bằng `&&` chỉ chạy trên PowerShell 7 trở lên. Nếu báo lỗi, cứ
+>   **gõ từng lệnh một dòng**.
+> - Làm mới trang bỏ cache: nhấn **Ctrl + Shift + R** (thay cho Cmd + Shift + R).
+> - Lệnh tạo `.gitignore` ở mục 5.3 có bản riêng cho Windows bên dưới.
 
 # 2. Tạo thư mục dự án
 
@@ -270,8 +299,16 @@ jobs:
 
 ## 5.3. Thêm `.gitignore`
 
+macOS:
+
 ```bash
-printf "_site/\n.quarto/\n" > ~/ten-website/.gitignore
+printf "_site/\n.quarto/\n" > .gitignore
+```
+
+Windows (PowerShell):
+
+```powershell
+"_site/`n.quarto/" | Out-File -Encoding ascii .gitignore
 ```
 
 ## 5.4. Tạo repo và đẩy code lần đầu
@@ -333,7 +370,7 @@ git add -A && git commit -m "Cập nhật nội dung" && git push
 ```
 
 GitHub tự dựng lại và đẩy web trong khoảng một phút. Khi xem lại, nhấn
-Cmd + Shift + R để bỏ cache trình duyệt.
+Cmd + Shift + R (macOS) hoặc Ctrl + Shift + R (Windows) để bỏ cache trình duyệt.
 
 # 7. Lấy DOI từ ORCID (tùy chọn)
 
@@ -390,7 +427,7 @@ Trong `index.qmd`, thêm dòng chữ tự gõ:
 | Hiện tượng | Cách xử lý |
 |---|---|
 | Workflow lỗi lần đầu, log báo thiếu `gh-pages` | Làm bước 5.5 tạo nhánh rồi chạy lại |
-| Sửa xong web vẫn nội dung cũ | Cache trình duyệt, dùng Cmd+Shift+R |
+| Sửa xong web vẫn nội dung cũ | Cache trình duyệt, dùng Cmd+Shift+R (Windows: Ctrl+Shift+R) |
 | Khối địa chỉ dính thành một dòng | Thêm dấu `\` cuối mỗi dòng cần ngắt |
 | Ảnh không hiện | Kiểm tra file ở `assets/profile.jpg` và đường dẫn trong `index.qmd` |
 | Đổi giao diện | Sửa `theme:` trong `_quarto.yml` (cosmo, flatly, litera, lux, journal) |
