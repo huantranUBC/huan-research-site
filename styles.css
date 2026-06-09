@@ -66,6 +66,24 @@ a:hover {
   font-weight: 600;
 }
 
+/* ---------- Typed.js rotating tagline ---------- */
+.typed-tagline {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--accent-soft);
+  min-height: 2.2rem;
+  margin: 0.2rem 0 1.1rem;
+  letter-spacing: -0.01em;
+}
+.typed-cursor {
+  color: var(--accent-soft);
+  font-weight: 400;
+}
+
+/* AOS safety: if JS fails to init, content must still be visible.
+   AOS sets opacity:0 only after its JS runs, so default stays visible. */
+
 /* ---------- About / home header ---------- */
 .about-image img,
 .quarto-title-block .about-entity img {
