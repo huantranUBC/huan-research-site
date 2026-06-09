@@ -23,7 +23,6 @@ website:
         href: "mailto:huan.tran@ubc.ca"
   page-footer:
     left: "© 2026 Huan Minh Tran"
-    right: "Built with [Quarto](https://quarto.org)"
 
 format:
   html:
