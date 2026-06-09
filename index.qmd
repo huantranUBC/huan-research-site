@@ -17,38 +17,25 @@ about:
       href: https://scholar.google.com/citations?user=OsfxbQsAAAAJ&hl=en
 ---
 
-*(he / him / his)*
+Postdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine,
+University of British Columbia.
 
-**Postdoctoral Researcher** · Division of Respiratory Medicine, Faculty of
-Medicine · The University of British Columbia, Vancouver Campus
-
-I am a postdoctoral researcher at the **University of British Columbia (UBC)**,
-working at the intersection of **respiratory epidemiology**, **climate and air
-pollution**, and **biostatistics**.
-
-My research examines how air pollution, extreme temperature, and climate
-variability affect chronic respiratory disease — particularly **COPD** — across
-scales ranging from individual lung-function decline to country-level mortality.
-I combine clinical cohorts, administrative health data, and global ecological
-analyses with reproducible statistical pipelines.
+My research studies how air pollution, extreme temperature, and climate
+variability affect chronic respiratory disease — particularly **COPD** — from
+individual lung-function decline to country-level mortality. I work with clinical
+cohorts, administrative health data, and global ecological analyses.
 
 ## Research interests
 
-- Air pollution, climate & chronic respiratory disease (COPD, asthma)
-- Extreme temperature and humidity effects on COPD morbidity and mortality
+- Air pollution, climate, and chronic respiratory disease
+- Extreme temperature and humidity effects on COPD
 - Eosinophilic COPD and susceptibility to particulate air pollution
-- Global and country-level analyses of climate-related respiratory mortality
-- Occupational & environmental exposure — metal fume PM2.5, volatile organic compounds
-- Reproducible biostatistics — R, Quarto, high-performance computing
-
-## Current position
-
-**Postdoctoral Researcher**
-Division of Respiratory Medicine, Faculty of Medicine
-The University of British Columbia, Vancouver Campus
+- Country-level analyses of climate-related respiratory mortality
+- Occupational and environmental exposure
+- Biostatistics in R and Quarto
 
 ## Contact
 
-2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada
-Phone: +1 236 996 8791
-Email: [huan.tran@ubc.ca](mailto:huan.tran@ubc.ca)
+Division of Respiratory Medicine, University of British Columbia\
+2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada\
+[huan.tran@ubc.ca](mailto:huan.tran@ubc.ca) · +1 236 996 8791

@@ -2,10 +2,6 @@
 title: "Publications"
 ---
 
-Author names are shown as listed by the source; **bold** marks my own name.
-`[Review]` denotes a review or meta-analysis. DOIs link to the published version.
-Conference abstracts are listed separately.
-
 ::: {.publications}
 
 ## Peer-reviewed journal articles

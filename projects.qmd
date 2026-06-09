@@ -2,9 +2,6 @@
 title: "Research"
 ---
 
-Selected research themes. Detailed methods and code are kept in private
-repositories; public summaries are provided here.
-
 ## Climate, temperature & COPD
 
 Effects of extreme temperature, humidity, and climate variability on COPD
