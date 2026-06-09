@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://huantranUBC.github.io/huan-research-site/projects.html</loc>
-    <lastmod>2026-06-09T03:48:30.674Z</lastmod>
-  </url>
-  <url>
-    <loc>https://huantranUBC.github.io/huan-research-site/cv.html</loc>
-    <lastmod>2026-06-09T03:48:30.674Z</lastmod>
-  </url>
-  <url>
-    <loc>https://huantranUBC.github.io/huan-research-site/publications.html</loc>
-    <lastmod>2026-06-09T03:48:30.675Z</lastmod>
+    <loc>https://huantranUBC.github.io/huan-research-site/HUONG_DAN.html</loc>
+    <lastmod>2026-06-09T03:53:21.887Z</lastmod>
   </url>
   <url>
     <loc>https://huantranUBC.github.io/huan-research-site/index.html</loc>
-    <lastmod>2026-06-09T03:48:30.674Z</lastmod>
+    <lastmod>2026-06-09T03:53:21.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huantranUBC.github.io/huan-research-site/publications.html</loc>
+    <lastmod>2026-06-09T03:53:21.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huantranUBC.github.io/huan-research-site/cv.html</loc>
+    <lastmod>2026-06-09T03:53:21.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://huantranUBC.github.io/huan-research-site/projects.html</loc>
+    <lastmod>2026-06-09T03:53:21.887Z</lastmod>
   </url>
 </urlset>

@@ -1,45 +1,108 @@
 [
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Research",
+    "objectID": "HUONG_DAN.html",
+    "href": "HUONG_DAN.html",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
     "section": "",
-    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
+    "text": "Hướng dẫn này dựng một website cá nhân (Home · Publications · Research · CV), miễn phí, tự render lại mỗi khi sửa nội dung. Người dùng chỉ cần biết gõ vài lệnh terminal — không cần biết lập trình web.\nThành phẩm mẫu: https://huantranubc.github.io/huan-research-site/\n\n\n\nTrên máy Mac, mở Terminal và cài 3 công cụ:\n# 1) Homebrew (trình quản lý cài đặt) — nếu chưa có\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n# 2) Quarto (công cụ dựng website từ file văn bản)\nbrew install --cask quarto\n\n# 3) Git + GitHub CLI (đưa website lên mạng)\nbrew install git gh\nKiểm tra đã cài được:\nquarto --version\ngit --version\ngh --version\n\n\n\n\nmkdir ~/ten-website && cd ~/ten-website\nToàn bộ file bên dưới đặt trực tiếp trong thư mục này.\n\n\n\n\nWebsite gồm 4 trang viết bằng Markdown (.qmd) + 2 file cấu hình + 1 file CSS. Markdown rất dễ: **đậm**, *nghiêng*, # Tiêu đề, - gạch đầu dòng, [chữ hiển thị](đường-link).\n\n⚠️ Mẹo quan trọng: trong Markdown, xuống dòng đơn sẽ bị dính thành 1 dòng. Muốn ngắt dòng thật (ví dụ khối địa chỉ liên hệ), thêm dấu \\ ở cuối dòng.\n\n\n\nproject:\n  type: website\n  output-dir: _site\n\nwebsite:\n  title: \"Họ Tên\"\n  description: \"Mô tả ngắn về bạn\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: publications.qmd\n        text: Publications\n      - href: projects.qmd\n        text: Research\n      - href: cv.qmd\n        text: CV\n    right:\n      - icon: github\n        href: https://github.com/USERNAME\n      - icon: envelope\n        href: \"mailto:email@vidu.com\"\n  page-footer:\n    left: \"© 2026 Họ Tên\"\n    right: \"Built with [Quarto](https://quarto.org)\"\n\nformat:\n  html:\n    theme: cosmo        # đổi theme tại đây: flatly, litera, lux, journal...\n    css: styles.css\n    toc: false\n    grid:\n      body-width: 900px\n\n\n\n---\ntitle: \"Họ Tên, MD, PhD\"\nabout:\n  template: trestles          # kiểu bố cục có ảnh bên trái\n  image: assets/profile.jpg\n  image-shape: round\n  links:\n    - icon: envelope\n      text: Email\n      href: \"mailto:email@vidu.com\"\n    - icon: github\n      text: GitHub\n      href: https://github.com/USERNAME\n    - text: \"ORCID\"\n      href: https://orcid.org/0000-0000-0000-0000\n    - text: \"Google Scholar\"\n      href: https://scholar.google.com/citations?user=XXXX\n---\n\nMột đoạn giới thiệu ngắn về vị trí và hướng nghiên cứu.\n\n## Research interests\n\n- Chủ đề 1\n- Chủ đề 2\n\n## Contact\n\nĐơn vị công tác\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com) · +1 234 567 8900\n\n\n\n---\ntitle: \"Publications\"\n---\n\n::: {.publications}\n\n## Peer-reviewed journal articles\n\n### 2025\n\n- **Họ Tên**, Đồng tác giả … (2025).\n  *Tên bài báo.* Tên tạp chí.\n  [DOI](https://doi.org/10.xxxx/xxxxx)\n\n### 2024\n\n- **Họ Tên**, … (2024). *Tên bài.* Tạp chí.\n  [DOI](https://doi.org/...)\n\n## Conference abstracts & proceedings\n\n- **Họ Tên**, … (2024). *Tên abstract.* Hội nghị.\n\n:::\n\nĐể tên mình in đậm. [DOI](...) sẽ tự thành nút bấm (nhờ CSS bên dưới).\n\n\n\n\n---\ntitle: \"Research\"\n---\n\n## Chủ đề A\n\nMô tả 1–2 câu.\n\n## Chủ đề B\n\nMô tả 1–2 câu.\n\n\n\n---\ntitle: \"Curriculum Vitae\"\n---\n\n## Contact\n\n**Họ Tên, MD, PhD**\\\nChức danh, Đơn vị\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com)\n\n## Education\n\n- **PhD** — Trường, Quốc gia\n- **MD** — Trường, Quốc gia\n\n## Appointments\n\n- **Chức danh**, Đơn vị, Năm\n\n## Skills\n\n- Kỹ năng 1\n- Kỹ năng 2\n\n\n\nCopy nguyên file styles.css trong repo này (font Newsreader + Source Sans, publication dạng thẻ bo góc, DOI thành nút badge). Đổi màu nhấn ở dòng --accent: #0d3b66;.\n\n\n\nmkdir -p ~/ten-website/assets\ncp ~/Downloads/anh-cua-ban.jpg ~/ten-website/assets/profile.jpg\n\n\n\n\n\ncd ~/ten-website\nquarto render          # dựng website vào thư mục _site/\nquarto preview         # mở trình duyệt xem trực tiếp, tự cập nhật khi sửa file\nSửa file .qmd → lưu → trang tự load lại. Ưng ý thì sang bước đưa lên mạng.\n\n\n\n\n\n\ngh auth login\nChọn lần lượt: GitHub.com → HTTPS → Yes → Login with a web browser. Màn hình hiện mã XXXX-XXXX → Enter để mở trình duyệt → dán mã → Authorize.\n\n\n\nTạo file này (GitHub sẽ tự render + đẩy web mỗi lần git push):\nname: Publish website\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\npermissions:\n  contents: write\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n      - name: Render and publish to gh-pages\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n\n\n\nprintf \"_site/\\n.quarto/\\n\" &gt; ~/ten-website/.gitignore\n\n\n\ncd ~/ten-website\ngit init -b main\ngit add -A\ngit commit -m \"Initial website\"\ngh repo create ten-website --public --source=. --push\n\n\n\nLần đầu nhánh gh-pages chưa tồn tại nên workflow báo lỗi. Tạo nhánh rỗng để mồi:\ngit checkout --orphan gh-pages\ngit rm -rf . &gt;/dev/null 2&gt;&1\necho \"building...\" &gt; index.html\ngit add index.html\ngit commit -m \"Init gh-pages\"\ngit push -u origin gh-pages\ngit checkout main\n\n\n\ngh api -X POST repos/USERNAME/ten-website/pages \\\n  -f source[branch]=gh-pages -f source[path]=/ 2&gt;/dev/null || true\n(Hoặc vào GitHub → repo → Settings → Pages → Source: gh-pages /(root) → Save.)\n\n\n\ngh workflow run publish.yml\ngh run watch    # theo dõi đến khi success\nSau ~1 phút website live tại:\nhttps://USERNAME.github.io/ten-website/\n\n📌 Quay lại _quarto.yml sửa site-url thành đúng địa chỉ này.\n\n\n\n\n\n\ncd ~/ten-website\n# ... sửa nội dung trong các file .qmd ...\ngit add -A && git commit -m \"Cập nhật nội dung\" && git push\nGitHub tự render lại + đẩy web trong khoảng 1 phút. Xem lại nhớ Cmd + Shift + R để bỏ cache trình duyệt.\n\n\n\n\nNếu đã có ORCID, lấy toàn bộ DOI chính chủ:\ncurl -s -H \"Accept: application/json\" \\\n  \"https://pub.orcid.org/v3.0/0000-0000-0000-0000/works\" \\\n  | grep -o '10\\.[0-9]\\{4,\\}/[^\"]*' | sort -u\nBài nào ORCID thiếu thì tra thêm trên https://search.crossref.org theo tên bài.\n\n\n\n\n\n\n\n\n\n\n\nHiện tượng\nCách xử lý\n\n\n\n\nWorkflow fail lần đầu, log nói thiếu gh-pages\nLàm bước 4.5 mồi nhánh rồi chạy lại\n\n\nSửa xong web vẫn nội dung cũ\nCache trình duyệt → Cmd+Shift+R hoặc cửa sổ ẩn danh\n\n\nKhối địa chỉ/liên hệ dính thành 1 dòng\nThêm dấu \\ ở cuối mỗi dòng cần ngắt\n\n\nẢnh không hiện\nKiểm tra file nằm đúng assets/profile.jpg và đường dẫn trong index.qmd\n\n\nĐổi theme\nSửa theme: trong _quarto.yml (cosmo, flatly, litera, lux, journal, …)\n\n\n\n\nMọi chỗ ghi USERNAME / ten-website / Họ Tên / email@vidu.com thay bằng thông tin thật."
   },
   {
-    "objectID": "projects.html#climate-temperature-copd",
-    "href": "projects.html#climate-temperature-copd",
-    "title": "Research",
+    "objectID": "HUONG_DAN.html#cần-cài-sẵn-một-lần",
+    "href": "HUONG_DAN.html#cần-cài-sẵn-một-lần",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
     "section": "",
-    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
+    "text": "Trên máy Mac, mở Terminal và cài 3 công cụ:\n# 1) Homebrew (trình quản lý cài đặt) — nếu chưa có\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n# 2) Quarto (công cụ dựng website từ file văn bản)\nbrew install --cask quarto\n\n# 3) Git + GitHub CLI (đưa website lên mạng)\nbrew install git gh\nKiểm tra đã cài được:\nquarto --version\ngit --version\ngh --version"
   },
   {
-    "objectID": "projects.html#air-pollution-respiratory-disease",
-    "href": "projects.html#air-pollution-respiratory-disease",
-    "title": "Research",
-    "section": "Air pollution & respiratory disease",
-    "text": "Air pollution & respiratory disease\nPM2.5 and air pollution exposure in chronic respiratory disease, including the heightened susceptibility of eosinophilic COPD and the pathways linking climate and pollution to disease severity."
+    "objectID": "HUONG_DAN.html#tạo-thư-mục-dự-án",
+    "href": "HUONG_DAN.html#tạo-thư-mục-dự-án",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "section": "",
+    "text": "mkdir ~/ten-website && cd ~/ten-website\nToàn bộ file bên dưới đặt trực tiếp trong thư mục này."
   },
   {
-    "objectID": "projects.html#global-country-level-mortality-analyses",
-    "href": "projects.html#global-country-level-mortality-analyses",
-    "title": "Research",
-    "section": "Global & country-level mortality analyses",
-    "text": "Global & country-level mortality analyses\nCountry-level ecological analyses of how climate variability and air pollution relate to respiratory and stroke mortality worldwide (2000–2020)."
+    "objectID": "HUONG_DAN.html#các-file-nội-dung",
+    "href": "HUONG_DAN.html#các-file-nội-dung",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "section": "",
+    "text": "Website gồm 4 trang viết bằng Markdown (.qmd) + 2 file cấu hình + 1 file CSS. Markdown rất dễ: **đậm**, *nghiêng*, # Tiêu đề, - gạch đầu dòng, [chữ hiển thị](đường-link).\n\n⚠️ Mẹo quan trọng: trong Markdown, xuống dòng đơn sẽ bị dính thành 1 dòng. Muốn ngắt dòng thật (ví dụ khối địa chỉ liên hệ), thêm dấu \\ ở cuối dòng.\n\n\n\nproject:\n  type: website\n  output-dir: _site\n\nwebsite:\n  title: \"Họ Tên\"\n  description: \"Mô tả ngắn về bạn\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: publications.qmd\n        text: Publications\n      - href: projects.qmd\n        text: Research\n      - href: cv.qmd\n        text: CV\n    right:\n      - icon: github\n        href: https://github.com/USERNAME\n      - icon: envelope\n        href: \"mailto:email@vidu.com\"\n  page-footer:\n    left: \"© 2026 Họ Tên\"\n    right: \"Built with [Quarto](https://quarto.org)\"\n\nformat:\n  html:\n    theme: cosmo        # đổi theme tại đây: flatly, litera, lux, journal...\n    css: styles.css\n    toc: false\n    grid:\n      body-width: 900px\n\n\n\n---\ntitle: \"Họ Tên, MD, PhD\"\nabout:\n  template: trestles          # kiểu bố cục có ảnh bên trái\n  image: assets/profile.jpg\n  image-shape: round\n  links:\n    - icon: envelope\n      text: Email\n      href: \"mailto:email@vidu.com\"\n    - icon: github\n      text: GitHub\n      href: https://github.com/USERNAME\n    - text: \"ORCID\"\n      href: https://orcid.org/0000-0000-0000-0000\n    - text: \"Google Scholar\"\n      href: https://scholar.google.com/citations?user=XXXX\n---\n\nMột đoạn giới thiệu ngắn về vị trí và hướng nghiên cứu.\n\n## Research interests\n\n- Chủ đề 1\n- Chủ đề 2\n\n## Contact\n\nĐơn vị công tác\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com) · +1 234 567 8900\n\n\n\n---\ntitle: \"Publications\"\n---\n\n::: {.publications}\n\n## Peer-reviewed journal articles\n\n### 2025\n\n- **Họ Tên**, Đồng tác giả … (2025).\n  *Tên bài báo.* Tên tạp chí.\n  [DOI](https://doi.org/10.xxxx/xxxxx)\n\n### 2024\n\n- **Họ Tên**, … (2024). *Tên bài.* Tạp chí.\n  [DOI](https://doi.org/...)\n\n## Conference abstracts & proceedings\n\n- **Họ Tên**, … (2024). *Tên abstract.* Hội nghị.\n\n:::\n\nĐể tên mình in đậm. [DOI](...) sẽ tự thành nút bấm (nhờ CSS bên dưới).\n\n\n\n\n---\ntitle: \"Research\"\n---\n\n## Chủ đề A\n\nMô tả 1–2 câu.\n\n## Chủ đề B\n\nMô tả 1–2 câu.\n\n\n\n---\ntitle: \"Curriculum Vitae\"\n---\n\n## Contact\n\n**Họ Tên, MD, PhD**\\\nChức danh, Đơn vị\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com)\n\n## Education\n\n- **PhD** — Trường, Quốc gia\n- **MD** — Trường, Quốc gia\n\n## Appointments\n\n- **Chức danh**, Đơn vị, Năm\n\n## Skills\n\n- Kỹ năng 1\n- Kỹ năng 2\n\n\n\nCopy nguyên file styles.css trong repo này (font Newsreader + Source Sans, publication dạng thẻ bo góc, DOI thành nút badge). Đổi màu nhấn ở dòng --accent: #0d3b66;.\n\n\n\nmkdir -p ~/ten-website/assets\ncp ~/Downloads/anh-cua-ban.jpg ~/ten-website/assets/profile.jpg"
   },
   {
-    "objectID": "projects.html#occupational-environmental-exposure",
-    "href": "projects.html#occupational-environmental-exposure",
-    "title": "Research",
-    "section": "Occupational & environmental exposure",
-    "text": "Occupational & environmental exposure\nMetal fume PM2.5 and lung-function decline among shipyard workers; volatile organic compound exposure and respiratory symptoms among nail salon workers in Vietnam."
+    "objectID": "HUONG_DAN.html#xem-thử-trên-máy-trước-khi-đưa-lên-mạng",
+    "href": "HUONG_DAN.html#xem-thử-trên-máy-trước-khi-đưa-lên-mạng",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "section": "",
+    "text": "cd ~/ten-website\nquarto render          # dựng website vào thư mục _site/\nquarto preview         # mở trình duyệt xem trực tiếp, tự cập nhật khi sửa file\nSửa file .qmd → lưu → trang tự load lại. Ưng ý thì sang bước đưa lên mạng."
   },
   {
-    "objectID": "projects.html#current-work-at-ubc",
-    "href": "projects.html#current-work-at-ubc",
-    "title": "Research",
-    "section": "Current work at UBC",
-    "text": "Current work at UBC\nEnvironmental epidemiology using large Canadian cohorts — air pollution, wildfire smoke, and the Canadian Longitudinal Study on Aging (CLSA)."
+    "objectID": "HUONG_DAN.html#đưa-lên-mạng-github-pages-miễn-phí",
+    "href": "HUONG_DAN.html#đưa-lên-mạng-github-pages-miễn-phí",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "section": "",
+    "text": "gh auth login\nChọn lần lượt: GitHub.com → HTTPS → Yes → Login with a web browser. Màn hình hiện mã XXXX-XXXX → Enter để mở trình duyệt → dán mã → Authorize.\n\n\n\nTạo file này (GitHub sẽ tự render + đẩy web mỗi lần git push):\nname: Publish website\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\npermissions:\n  contents: write\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n      - name: Render and publish to gh-pages\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n\n\n\nprintf \"_site/\\n.quarto/\\n\" &gt; ~/ten-website/.gitignore\n\n\n\ncd ~/ten-website\ngit init -b main\ngit add -A\ngit commit -m \"Initial website\"\ngh repo create ten-website --public --source=. --push\n\n\n\nLần đầu nhánh gh-pages chưa tồn tại nên workflow báo lỗi. Tạo nhánh rỗng để mồi:\ngit checkout --orphan gh-pages\ngit rm -rf . &gt;/dev/null 2&gt;&1\necho \"building...\" &gt; index.html\ngit add index.html\ngit commit -m \"Init gh-pages\"\ngit push -u origin gh-pages\ngit checkout main\n\n\n\ngh api -X POST repos/USERNAME/ten-website/pages \\\n  -f source[branch]=gh-pages -f source[path]=/ 2&gt;/dev/null || true\n(Hoặc vào GitHub → repo → Settings → Pages → Source: gh-pages /(root) → Save.)\n\n\n\ngh workflow run publish.yml\ngh run watch    # theo dõi đến khi success\nSau ~1 phút website live tại:\nhttps://USERNAME.github.io/ten-website/\n\n📌 Quay lại _quarto.yml sửa site-url thành đúng địa chỉ này."
+  },
+  {
+    "objectID": "HUONG_DAN.html#cập-nhật-về-sau-chỉ-2-lệnh",
+    "href": "HUONG_DAN.html#cập-nhật-về-sau-chỉ-2-lệnh",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "section": "",
+    "text": "cd ~/ten-website\n# ... sửa nội dung trong các file .qmd ...\ngit add -A && git commit -m \"Cập nhật nội dung\" && git push\nGitHub tự render lại + đẩy web trong khoảng 1 phút. Xem lại nhớ Cmd + Shift + R để bỏ cache trình duyệt."
+  },
+  {
+    "objectID": "HUONG_DAN.html#lấy-doi-tự-động-cho-danh-sách-bài-báo-tùy-chọn",
+    "href": "HUONG_DAN.html#lấy-doi-tự-động-cho-danh-sách-bài-báo-tùy-chọn",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "section": "",
+    "text": "Nếu đã có ORCID, lấy toàn bộ DOI chính chủ:\ncurl -s -H \"Accept: application/json\" \\\n  \"https://pub.orcid.org/v3.0/0000-0000-0000-0000/works\" \\\n  | grep -o '10\\.[0-9]\\{4,\\}/[^\"]*' | sort -u\nBài nào ORCID thiếu thì tra thêm trên https://search.crossref.org theo tên bài."
+  },
+  {
+    "objectID": "HUONG_DAN.html#lỗi-thường-gặp",
+    "href": "HUONG_DAN.html#lỗi-thường-gặp",
+    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "section": "",
+    "text": "Hiện tượng\nCách xử lý\n\n\n\n\nWorkflow fail lần đầu, log nói thiếu gh-pages\nLàm bước 4.5 mồi nhánh rồi chạy lại\n\n\nSửa xong web vẫn nội dung cũ\nCache trình duyệt → Cmd+Shift+R hoặc cửa sổ ẩn danh\n\n\nKhối địa chỉ/liên hệ dính thành 1 dòng\nThêm dấu \\ ở cuối mỗi dòng cần ngắt\n\n\nẢnh không hiện\nKiểm tra file nằm đúng assets/profile.jpg và đường dẫn trong index.qmd\n\n\nĐổi theme\nSửa theme: trong _quarto.yml (cosmo, flatly, litera, lux, journal, …)\n\n\n\n\nMọi chỗ ghi USERNAME / ten-website / Họ Tên / email@vidu.com thay bằng thông tin thật."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Huan Minh Tran, MD, PhD",
+    "section": "",
+    "text": "Postdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine, University of British Columbia.\nMy research studies how air pollution, extreme temperature, and climate variability affect chronic respiratory disease — particularly COPD — from individual lung-function decline to country-level mortality. I work with clinical cohorts, administrative health data, and global ecological analyses."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Huan Minh Tran, MD, PhD",
+    "section": "Research interests",
+    "text": "Research interests\n\nAir pollution, climate, and chronic respiratory disease\nExtreme temperature and humidity effects on COPD\nEosinophilic COPD and susceptibility to particulate air pollution\nCountry-level analyses of climate-related respiratory mortality\nOccupational and environmental exposure\nBiostatistics in R and Quarto"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Huan Minh Tran, MD, PhD",
+    "section": "Contact",
+    "text": "Contact\nDivision of Respiratory Medicine, University of British Columbia\n2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada\nhuan.tran@ubc.ca · +1 236 996 8791"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, … Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, … Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Response to letter to the editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment.\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, … Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, … Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer Hwa Chang, … Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, … Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, … Dung Tri Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan Minh Tran, Hanh T. M. Bui, Somkiat Thoumsang, … Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI\n\n\n\n\n\n\nHuan Minh Tran, Hsiao-Chi Chuang, Amja Manullang, … Kian Fan Chung (2024). Increased risk of severity in COPD with eosinophilic inflammation due to air pollution exposure. ERS Congress 2024 Abstracts. DOI\nHuan Minh Tran, Lin-Yuan Chien, Feng-Jen Tsai, Hsiao-Chi Chuang (2023). Effects of climate-mediated PM2.5 on lung function decline in chronic obstructive pulmonary disease. ISEE Conference Abstracts."
+  },
+  {
+    "objectID": "publications.html#peer-reviewed-journal-articles",
+    "href": "publications.html#peer-reviewed-journal-articles",
+    "title": "Publications",
+    "section": "",
+    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, … Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, … Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Response to letter to the editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment.\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, … Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, … Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer Hwa Chang, … Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, … Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, … Dung Tri Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan Minh Tran, Hanh T. M. Bui, Somkiat Thoumsang, … Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI"
+  },
+  {
+    "objectID": "publications.html#conference-abstracts-proceedings",
+    "href": "publications.html#conference-abstracts-proceedings",
+    "title": "Publications",
+    "section": "",
+    "text": "Huan Minh Tran, Hsiao-Chi Chuang, Amja Manullang, … Kian Fan Chung (2024). Increased risk of severity in COPD with eosinophilic inflammation due to air pollution exposure. ERS Congress 2024 Abstracts. DOI\nHuan Minh Tran, Lin-Yuan Chien, Feng-Jen Tsai, Hsiao-Chi Chuang (2023). Effects of climate-mediated PM2.5 on lung function decline in chronic obstructive pulmonary disease. ISEE Conference Abstracts."
   },
   {
     "objectID": "cv.html",
@@ -84,45 +147,45 @@
     "text": "Skills\n\nStatistical computing: R, Quarto, reproducible pipelines, high-performance computing (Sockeye)\nMethods: epidemiological study design, survival analysis, cohort & case-crossover designs"
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Research",
     "section": "",
-    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, … Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, … Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Response to letter to the editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment.\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, … Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, … Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer Hwa Chang, … Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, … Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, … Dung Tri Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan Minh Tran, Hanh T. M. Bui, Somkiat Thoumsang, … Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI\n\n\n\n\n\n\nHuan Minh Tran, Hsiao-Chi Chuang, Amja Manullang, … Kian Fan Chung (2024). Increased risk of severity in COPD with eosinophilic inflammation due to air pollution exposure. ERS Congress 2024 Abstracts. DOI\nHuan Minh Tran, Lin-Yuan Chien, Feng-Jen Tsai, Hsiao-Chi Chuang (2023). Effects of climate-mediated PM2.5 on lung function decline in chronic obstructive pulmonary disease. ISEE Conference Abstracts."
+    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
   },
   {
-    "objectID": "publications.html#peer-reviewed-journal-articles",
-    "href": "publications.html#peer-reviewed-journal-articles",
-    "title": "Publications",
+    "objectID": "projects.html#climate-temperature-copd",
+    "href": "projects.html#climate-temperature-copd",
+    "title": "Research",
     "section": "",
-    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, … Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, … Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Response to letter to the editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment.\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, … Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, … Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer Hwa Chang, … Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, … Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, … Dung Tri Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan Minh Tran, Hanh T. M. Bui, Somkiat Thoumsang, … Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI"
+    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
   },
   {
-    "objectID": "publications.html#conference-abstracts-proceedings",
-    "href": "publications.html#conference-abstracts-proceedings",
-    "title": "Publications",
-    "section": "",
-    "text": "Huan Minh Tran, Hsiao-Chi Chuang, Amja Manullang, … Kian Fan Chung (2024). Increased risk of severity in COPD with eosinophilic inflammation due to air pollution exposure. ERS Congress 2024 Abstracts. DOI\nHuan Minh Tran, Lin-Yuan Chien, Feng-Jen Tsai, Hsiao-Chi Chuang (2023). Effects of climate-mediated PM2.5 on lung function decline in chronic obstructive pulmonary disease. ISEE Conference Abstracts."
+    "objectID": "projects.html#air-pollution-respiratory-disease",
+    "href": "projects.html#air-pollution-respiratory-disease",
+    "title": "Research",
+    "section": "Air pollution & respiratory disease",
+    "text": "Air pollution & respiratory disease\nPM2.5 and air pollution exposure in chronic respiratory disease, including the heightened susceptibility of eosinophilic COPD and the pathways linking climate and pollution to disease severity."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Huan Minh Tran, MD, PhD",
-    "section": "",
-    "text": "Postdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine, University of British Columbia.\nMy research studies how air pollution, extreme temperature, and climate variability affect chronic respiratory disease — particularly COPD — from individual lung-function decline to country-level mortality. I work with clinical cohorts, administrative health data, and global ecological analyses."
+    "objectID": "projects.html#global-country-level-mortality-analyses",
+    "href": "projects.html#global-country-level-mortality-analyses",
+    "title": "Research",
+    "section": "Global & country-level mortality analyses",
+    "text": "Global & country-level mortality analyses\nCountry-level ecological analyses of how climate variability and air pollution relate to respiratory and stroke mortality worldwide (2000–2020)."
   },
   {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Huan Minh Tran, MD, PhD",
-    "section": "Research interests",
-    "text": "Research interests\n\nAir pollution, climate, and chronic respiratory disease\nExtreme temperature and humidity effects on COPD\nEosinophilic COPD and susceptibility to particulate air pollution\nCountry-level analyses of climate-related respiratory mortality\nOccupational and environmental exposure\nBiostatistics in R and Quarto"
+    "objectID": "projects.html#occupational-environmental-exposure",
+    "href": "projects.html#occupational-environmental-exposure",
+    "title": "Research",
+    "section": "Occupational & environmental exposure",
+    "text": "Occupational & environmental exposure\nMetal fume PM2.5 and lung-function decline among shipyard workers; volatile organic compound exposure and respiratory symptoms among nail salon workers in Vietnam."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Huan Minh Tran, MD, PhD",
-    "section": "Contact",
-    "text": "Contact\nDivision of Respiratory Medicine, University of British Columbia\n2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada\nhuan.tran@ubc.ca · +1 236 996 8791"
+    "objectID": "projects.html#current-work-at-ubc",
+    "href": "projects.html#current-work-at-ubc",
+    "title": "Research",
+    "section": "Current work at UBC",
+    "text": "Current work at UBC\nEnvironmental epidemiology using large Canadian cohorts — air pollution, wildfire smoke, and the Canadian Longitudinal Study on Aging (CLSA)."
   }
 ]
