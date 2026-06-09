@@ -17,8 +17,8 @@ about:
       href: https://scholar.google.com/citations?user=OsfxbQsAAAAJ&hl=en
 ---
 
-::: {.typed-tagline}
-<span id="typed-target" data-strings="Respiratory epidemiologist|Climate &amp; air pollution researcher|Environmental health scientist|Biostatistician in R"></span>
+::: {.tagline}
+Respiratory epidemiologist / Climate & air pollution / Environmental health / Biostatistics
 :::
 
 Postdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine,

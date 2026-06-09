@@ -1,29 +1,34 @@
-# Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)
-
-Hướng dẫn này dựng một website cá nhân (Home · Publications · Research · CV),
-miễn phí, tự render lại mỗi khi sửa nội dung. Người dùng chỉ cần biết gõ vài
-lệnh terminal — **không cần biết lập trình web**.
-
-Thành phẩm mẫu: <https://huantranubc.github.io/huan-research-site/>
-
+---
+title: "Hướng dẫn tạo website học thuật cá nhân"
+subtitle: "Quarto và GitHub Pages"
+lang: vi
 ---
 
-## 0. Cần cài sẵn (một lần)
+# Giới thiệu
 
-Trên máy Mac, mở **Terminal** và cài 3 công cụ:
+Tài liệu này hướng dẫn dựng một website cá nhân gồm bốn trang (Home,
+Publications, Research, CV), lưu trữ miễn phí trên GitHub Pages và tự cập nhật
+mỗi khi sửa nội dung. Người làm theo chỉ cần gõ một số lệnh trong Terminal,
+không cần biết lập trình web.
+
+Website mẫu: https://huantranubc.github.io/huan-research-site/
+
+# 1. Cài đặt công cụ (làm một lần)
+
+Trên máy Mac, mở **Terminal** và cài ba công cụ.
 
 ```bash
-# 1) Homebrew (trình quản lý cài đặt) — nếu chưa có
+# Homebrew (trình quản lý cài đặt) — bỏ qua nếu đã có
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# 2) Quarto (công cụ dựng website từ file văn bản)
+# Quarto (dựng website từ file văn bản)
 brew install --cask quarto
 
-# 3) Git + GitHub CLI (đưa website lên mạng)
+# Git và GitHub CLI (đưa website lên mạng)
 brew install git gh
 ```
 
-Kiểm tra đã cài được:
+Kiểm tra:
 
 ```bash
 quarto --version
@@ -31,28 +36,25 @@ git --version
 gh --version
 ```
 
----
-
-## 1. Tạo thư mục dự án
+# 2. Tạo thư mục dự án
 
 ```bash
 mkdir ~/ten-website && cd ~/ten-website
 ```
 
-Toàn bộ file bên dưới đặt **trực tiếp** trong thư mục này.
+Mọi file bên dưới đặt trực tiếp trong thư mục này.
 
----
+# 3. Các file nội dung
 
-## 2. Các file nội dung
-
-Website gồm 4 trang viết bằng Markdown (`.qmd`) + 2 file cấu hình + 1 file CSS.
-Markdown rất dễ: `**đậm**`, `*nghiêng*`, `# Tiêu đề`, `- gạch đầu dòng`,
+Website gồm bốn trang viết bằng Markdown (`.qmd`), một file cấu hình
+(`_quarto.yml`) và một file định dạng (`styles.css`). Cú pháp Markdown cơ bản:
+`**đậm**`, `*nghiêng*`, `# Tiêu đề`, `- gạch đầu dòng`,
 `[chữ hiển thị](đường-link)`.
 
-> ⚠️ Mẹo quan trọng: trong Markdown, **xuống dòng đơn sẽ bị dính thành 1 dòng**.
-> Muốn ngắt dòng thật (ví dụ khối địa chỉ liên hệ), thêm dấu `\` ở cuối dòng.
+Lưu ý: trong Markdown, xuống dòng đơn sẽ bị gộp thành một dòng. Muốn ngắt dòng
+thật (ví dụ khối địa chỉ liên hệ), thêm dấu `\` ở cuối dòng.
 
-### 2.1 `_quarto.yml` — cấu hình chung (menu, tiêu đề, theme)
+## 3.1. `_quarto.yml` — cấu hình chung
 
 ```yaml
 project:
@@ -61,7 +63,7 @@ project:
 
 website:
   title: "Họ Tên"
-  description: "Mô tả ngắn về bạn"
+  description: "Mô tả ngắn"
   navbar:
     left:
       - href: index.qmd
@@ -79,24 +81,23 @@ website:
         href: "mailto:email@vidu.com"
   page-footer:
     left: "© 2026 Họ Tên"
-    right: "Built with [Quarto](https://quarto.org)"
 
 format:
   html:
-    theme: cosmo        # đổi theme tại đây: flatly, litera, lux, journal...
+    theme: cosmo        # đổi theme: flatly, litera, lux, journal...
     css: styles.css
     toc: false
     grid:
       body-width: 900px
 ```
 
-### 2.2 `index.qmd` — trang chủ (ảnh + giới thiệu)
+## 3.2. `index.qmd` — trang chủ
 
 ```markdown
 ---
 title: "Họ Tên, MD, PhD"
 about:
-  template: trestles          # kiểu bố cục có ảnh bên trái
+  template: trestles
   image: assets/profile.jpg
   image-shape: round
   links:
@@ -126,7 +127,7 @@ Một đoạn giới thiệu ngắn về vị trí và hướng nghiên cứu.
 [email@vidu.com](mailto:email@vidu.com) · +1 234 567 8900
 ```
 
-### 2.3 `publications.qmd` — danh sách bài báo
+## 3.3. `publications.qmd` — danh sách bài báo
 
 ```markdown
 ---
@@ -155,9 +156,9 @@ title: "Publications"
 :::
 ```
 
-> Để tên mình **in đậm**. `[DOI](...)` sẽ tự thành nút bấm (nhờ CSS bên dưới).
+Tên mình để in đậm. `[DOI](...)` sẽ thành nút bấm nhờ CSS bên dưới.
 
-### 2.4 `projects.qmd` — hướng nghiên cứu
+## 3.4. `projects.qmd` — hướng nghiên cứu
 
 ```markdown
 ---
@@ -166,14 +167,14 @@ title: "Research"
 
 ## Chủ đề A
 
-Mô tả 1–2 câu.
+Mô tả một đến hai câu.
 
 ## Chủ đề B
 
-Mô tả 1–2 câu.
+Mô tả một đến hai câu.
 ```
 
-### 2.5 `cv.qmd` — lý lịch
+## 3.5. `cv.qmd` — lý lịch
 
 ```markdown
 ---
@@ -202,47 +203,43 @@ Chức danh, Đơn vị\
 - Kỹ năng 2
 ```
 
-### 2.6 `styles.css` — làm đẹp (font, màu, thẻ publication)
+## 3.6. `styles.css` — định dạng
 
-Copy nguyên file `styles.css` trong repo này (font Newsreader + Source Sans,
-publication dạng thẻ bo góc, DOI thành nút badge). Đổi màu nhấn ở dòng
-`--accent: #0d3b66;`.
+Copy file `styles.css` từ repo mẫu (font Newsreader và Source Sans, publication
+dạng thẻ bo góc, DOI thành nút). Đổi màu nhấn tại dòng `--accent: #0d3b66;`.
 
-### 2.7 Ảnh chân dung
+## 3.7. Ảnh chân dung
 
 ```bash
 mkdir -p ~/ten-website/assets
 cp ~/Downloads/anh-cua-ban.jpg ~/ten-website/assets/profile.jpg
 ```
 
----
-
-## 3. Xem thử trên máy (trước khi đưa lên mạng)
+# 4. Xem thử trên máy
 
 ```bash
 cd ~/ten-website
 quarto render          # dựng website vào thư mục _site/
-quarto preview         # mở trình duyệt xem trực tiếp, tự cập nhật khi sửa file
+quarto preview         # mở trình duyệt, tự cập nhật khi sửa file
 ```
 
-Sửa file `.qmd` → lưu → trang tự load lại. Ưng ý thì sang bước đưa lên mạng.
+Sửa file `.qmd`, lưu lại, trang tự load lại. Ưng ý thì chuyển sang bước đưa lên
+mạng.
 
----
+# 5. Đưa lên mạng (GitHub Pages)
 
-## 4. Đưa lên mạng (GitHub Pages — miễn phí)
-
-### 4.1 Đăng nhập GitHub (một lần)
+## 5.1. Đăng nhập GitHub (một lần)
 
 ```bash
 gh auth login
 ```
 
-Chọn lần lượt: **GitHub.com → HTTPS → Yes → Login with a web browser**.
-Màn hình hiện mã `XXXX-XXXX` → Enter để mở trình duyệt → dán mã → **Authorize**.
+Chọn lần lượt: GitHub.com, HTTPS, Yes, Login with a web browser. Màn hình hiện
+mã `XXXX-XXXX`, nhấn Enter để mở trình duyệt, dán mã, chọn Authorize.
 
-### 4.2 File tự-deploy `.github/workflows/publish.yml`
+## 5.2. File tự cập nhật `.github/workflows/publish.yml`
 
-Tạo file này (GitHub sẽ tự render + đẩy web mỗi lần `git push`):
+Tạo file này để GitHub tự dựng và đẩy web mỗi lần `git push`:
 
 ```yaml
 name: Publish website
@@ -271,13 +268,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-### 4.3 Thêm `.gitignore` (không đẩy thư mục build)
+## 5.3. Thêm `.gitignore`
 
 ```bash
 printf "_site/\n.quarto/\n" > ~/ten-website/.gitignore
 ```
 
-### 4.4 Tạo repo + đẩy code lần đầu
+## 5.4. Tạo repo và đẩy code lần đầu
 
 ```bash
 cd ~/ten-website
@@ -287,9 +284,10 @@ git commit -m "Initial website"
 gh repo create ten-website --public --source=. --push
 ```
 
-### 4.5 Mồi nhánh `gh-pages` (tránh lỗi "con gà–quả trứng")
+## 5.5. Tạo nhánh `gh-pages` ban đầu
 
-Lần đầu nhánh `gh-pages` chưa tồn tại nên workflow báo lỗi. Tạo nhánh rỗng để mồi:
+Lần đầu nhánh `gh-pages` chưa tồn tại nên workflow sẽ báo lỗi. Tạo nhánh rỗng để
+khởi tạo:
 
 ```bash
 git checkout --orphan gh-pages
@@ -301,48 +299,45 @@ git push -u origin gh-pages
 git checkout main
 ```
 
-### 4.6 Bật GitHub Pages
+## 5.6. Bật GitHub Pages
 
 ```bash
 gh api -X POST repos/USERNAME/ten-website/pages \
   -f source[branch]=gh-pages -f source[path]=/ 2>/dev/null || true
 ```
 
-(Hoặc vào **GitHub → repo → Settings → Pages → Source: gh-pages /(root) → Save**.)
+Hoặc vào GitHub, repo, Settings, Pages, chọn Source là `gh-pages` và `/(root)`,
+rồi Save.
 
-### 4.7 Chạy lại workflow để render bản thật
+## 5.7. Chạy workflow để dựng bản thật
 
 ```bash
 gh workflow run publish.yml
-gh run watch    # theo dõi đến khi success
+gh run watch
 ```
 
-Sau ~1 phút website live tại:
+Sau khoảng một phút website chạy tại:
 
 ```
 https://USERNAME.github.io/ten-website/
 ```
 
-> 📌 Quay lại `_quarto.yml` sửa `site-url` thành đúng địa chỉ này.
+Quay lại `_quarto.yml`, sửa `site-url` thành địa chỉ này.
 
----
-
-## 5. Cập nhật về sau (chỉ 2 lệnh)
+# 6. Cập nhật về sau
 
 ```bash
 cd ~/ten-website
-# ... sửa nội dung trong các file .qmd ...
+# sửa nội dung trong các file .qmd
 git add -A && git commit -m "Cập nhật nội dung" && git push
 ```
 
-GitHub tự render lại + đẩy web trong khoảng 1 phút. Xem lại nhớ
-**Cmd + Shift + R** để bỏ cache trình duyệt.
+GitHub tự dựng lại và đẩy web trong khoảng một phút. Khi xem lại, nhấn
+Cmd + Shift + R để bỏ cache trình duyệt.
 
----
+# 7. Lấy DOI từ ORCID (tùy chọn)
 
-## 6. Lấy DOI tự động cho danh sách bài báo (tùy chọn)
-
-Nếu đã có **ORCID**, lấy toàn bộ DOI chính chủ:
+Nếu đã có ORCID, lấy toàn bộ DOI:
 
 ```bash
 curl -s -H "Accept: application/json" \
@@ -350,21 +345,55 @@ curl -s -H "Accept: application/json" \
   | grep -o '10\.[0-9]\{4,\}/[^"]*' | sort -u
 ```
 
-Bài nào ORCID thiếu thì tra thêm trên <https://search.crossref.org> theo tên bài.
+Bài nào ORCID thiếu thì tra thêm trên https://search.crossref.org theo tên bài.
 
----
+# 8. Hiệu ứng động (tùy chọn)
 
-## 7. Lỗi thường gặp
+Thêm chữ tự gõ và hiệu ứng cuộn trang. Trong `_quarto.yml`, mục
+`format: html:`, thêm:
+
+```yaml
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    include-after-body:
+      - text: |
+          <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var t = document.querySelector('#typed-target');
+              if (t && window.Typed) {
+                new Typed('#typed-target', {
+                  strings: t.getAttribute('data-strings').split('|'),
+                  typeSpeed: 55, backSpeed: 28, backDelay: 1600,
+                  startDelay: 300, loop: true, smartBackspace: true
+                });
+              }
+              document.querySelectorAll('main h2, main h3, .publications ul > li')
+                .forEach(function (el) { el.setAttribute('data-aos', 'fade-up'); });
+              if (window.AOS) AOS.init({ once: true, offset: 60 });
+            });
+          </script>
+```
+
+Trong `index.qmd`, thêm dòng chữ tự gõ:
+
+```markdown
+::: {.typed-tagline}
+<span id="typed-target" data-strings="Vai trò 1|Vai trò 2|Vai trò 3"></span>
+:::
+```
+
+# 9. Lỗi thường gặp
 
 | Hiện tượng | Cách xử lý |
 |---|---|
-| Workflow fail lần đầu, log nói thiếu `gh-pages` | Làm bước **4.5** mồi nhánh rồi chạy lại |
-| Sửa xong web vẫn nội dung cũ | Cache trình duyệt → **Cmd+Shift+R** hoặc cửa sổ ẩn danh |
-| Khối địa chỉ/liên hệ dính thành 1 dòng | Thêm dấu `\` ở cuối mỗi dòng cần ngắt |
-| Ảnh không hiện | Kiểm tra file nằm đúng `assets/profile.jpg` và đường dẫn trong `index.qmd` |
-| Đổi theme | Sửa `theme:` trong `_quarto.yml` (cosmo, flatly, litera, lux, journal, …) |
+| Workflow lỗi lần đầu, log báo thiếu `gh-pages` | Làm bước 5.5 tạo nhánh rồi chạy lại |
+| Sửa xong web vẫn nội dung cũ | Cache trình duyệt, dùng Cmd+Shift+R |
+| Khối địa chỉ dính thành một dòng | Thêm dấu `\` cuối mỗi dòng cần ngắt |
+| Ảnh không hiện | Kiểm tra file ở `assets/profile.jpg` và đường dẫn trong `index.qmd` |
+| Đổi giao diện | Sửa `theme:` trong `_quarto.yml` (cosmo, flatly, litera, lux, journal) |
 
----
-
-*Mọi chỗ ghi `USERNAME` / `ten-website` / `Họ Tên` / `email@vidu.com` thay bằng
-thông tin thật.*
+Mọi chỗ ghi `USERNAME`, `ten-website`, `Họ Tên`, `email@vidu.com` thay bằng
+thông tin thật.
