@@ -7,6 +7,27 @@
     "text": "Tài liệu này hướng dẫn dựng một website cá nhân gồm bốn trang (Home, Publications, Research, CV), lưu trữ miễn phí trên GitHub Pages và tự cập nhật mỗi khi sửa nội dung. Người làm theo chỉ cần gõ một số lệnh trong Terminal, không cần biết lập trình web.\nWebsite mẫu: https://huantranubc.github.io/huan-research-site/"
   },
   {
+    "objectID": "HUONG_DAN.html#a.-trên-macos",
+    "href": "HUONG_DAN.html#a.-trên-macos",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "1a. Trên macOS",
+    "text": "1a. Trên macOS\nMở Terminal.\n# Homebrew (trình quản lý cài đặt) — bỏ qua nếu đã có\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n# Quarto, Git, GitHub CLI\nbrew install --cask quarto\nbrew install git gh"
+  },
+  {
+    "objectID": "HUONG_DAN.html#b.-trên-windows",
+    "href": "HUONG_DAN.html#b.-trên-windows",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "1b. Trên Windows",
+    "text": "1b. Trên Windows\nMở PowerShell (gõ “PowerShell” ở menu Start). Windows 10 và 11 có sẵn lệnh winget.\nwinget install --id Quarto.Quarto -e\nwinget install --id Git.Git -e\nwinget install --id GitHub.cli -e\nNếu máy không có winget, tải bộ cài trực tiếp:\n\nQuarto: https://quarto.org/docs/get-started/\nGit: https://git-scm.com/download/win\nGitHub CLI: https://cli.github.com/\n\nSau khi cài, đóng và mở lại PowerShell để nhận lệnh mới."
+  },
+  {
+    "objectID": "HUONG_DAN.html#c.-kiểm-tra-cả-hai-hệ-điều-hành",
+    "href": "HUONG_DAN.html#c.-kiểm-tra-cả-hai-hệ-điều-hành",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "1c. Kiểm tra (cả hai hệ điều hành)",
+    "text": "1c. Kiểm tra (cả hai hệ điều hành)\nquarto --version\ngit --version\ngh --version\n\nKhác biệt cần nhớ khi dùng Windows:\n\nDùng PowerShell, không phải Terminal.\nNối hai lệnh bằng && chỉ chạy trên PowerShell 7 trở lên. Nếu báo lỗi, cứ gõ từng lệnh một dòng.\nLàm mới trang bỏ cache: nhấn Ctrl + Shift + R (thay cho Cmd + Shift + R).\nLệnh tạo .gitignore ở mục 5.3 có bản riêng cho Windows bên dưới."
+  },
+  {
     "objectID": "HUONG_DAN.html#quarto.yml-cấu-hình-chung",
     "href": "HUONG_DAN.html#quarto.yml-cấu-hình-chung",
     "title": "Hướng dẫn tạo website học thuật cá nhân",
@@ -74,7 +95,7 @@
     "href": "HUONG_DAN.html#thêm-.gitignore",
     "title": "Hướng dẫn tạo website học thuật cá nhân",
     "section": "5.3. Thêm .gitignore",
-    "text": "5.3. Thêm .gitignore\nprintf \"_site/\\n.quarto/\\n\" &gt; ~/ten-website/.gitignore"
+    "text": "5.3. Thêm .gitignore\nmacOS:\nprintf \"_site/\\n.quarto/\\n\" &gt; .gitignore\nWindows (PowerShell):\n\"_site/`n.quarto/\" | Out-File -Encoding ascii .gitignore"
   },
   {
     "objectID": "HUONG_DAN.html#tạo-repo-và-đẩy-code-lần-đầu",
