@@ -1,0 +1,34 @@
+---
+title: "Research"
+---
+
+Selected research themes. Detailed methods and code are kept in private
+repositories; public summaries are provided here.
+
+## Climate, temperature & COPD
+
+Effects of extreme temperature, humidity, and climate variability on COPD
+severity, morbidity, and mortality — spanning individual lung-function decline,
+mediation analyses, and systematic reviews with meta-analysis.
+
+## Air pollution & respiratory disease
+
+PM2.5 and air pollution exposure in chronic respiratory disease, including the
+heightened susceptibility of eosinophilic COPD and the pathways linking climate
+and pollution to disease severity.
+
+## Global & country-level mortality analyses
+
+Country-level ecological analyses of how climate variability and air pollution
+relate to respiratory and stroke mortality worldwide (2000–2020).
+
+## Occupational & environmental exposure
+
+Metal fume PM2.5 and lung-function decline among shipyard workers; volatile
+organic compound exposure and respiratory symptoms among nail salon workers in
+Vietnam.
+
+## Current work at UBC
+
+Environmental epidemiology using large Canadian cohorts — air pollution,
+wildfire smoke, and the Canadian Longitudinal Study on Aging (CLSA).

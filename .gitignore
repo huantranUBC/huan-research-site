@@ -1,0 +1,20 @@
+# Quarto build output
+/_site/
+/.quarto/
+*_files/
+
+# Never commit data or sensitive material
+*.csv
+*.rds
+*.RData
+*.sav
+*.sas7bdat
+*.dta
+*.xlsx
+/data/
+
+# OS / editor
+.DS_Store
+*~
+
+**/*.quarto_ipynb

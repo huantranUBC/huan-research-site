@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Huan M. Tran"
+  description: "Postdoctoral researcher in respiratory & environmental epidemiology"
+  site-url: "https://huantranUBC.github.io/huan-research-site"   # TODO: replace huantranUBC after first deploy
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: publications.qmd
+        text: Publications
+      - href: projects.qmd
+        text: Research
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/huantranUBC            # TODO
+      - icon: envelope
+        href: "mailto:huantranmyhanh1991@gmail.com"
+  page-footer:
+    left: "© 2026 Huan M. Tran"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+    grid:
+      body-width: 900px

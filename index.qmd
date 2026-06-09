@@ -1,0 +1,41 @@
+---
+title: "Huan M. Tran, MD, PhD"
+about:
+  template: trestles
+  image: assets/profile.jpg          # TODO: add a photo named profile.jpg in assets/
+  image-shape: round
+  links:
+    - icon: envelope
+      text: Email
+      href: "mailto:huantranmyhanh1991@gmail.com"
+    - icon: github
+      text: GitHub
+      href: https://github.com/huantranUBC          # TODO
+    - text: "ORCID"
+      href: https://orcid.org/0000-0000-0000-0000   # TODO: your ORCID
+    - text: "Google Scholar"
+      href: https://scholar.google.com/citations?user=OsfxbQsAAAAJ&hl=en
+---
+
+I am a postdoctoral researcher at the **University of British Columbia (UBC)**,
+working at the intersection of **respiratory epidemiology**, **climate and air
+pollution**, and **biostatistics**.
+
+My research examines how air pollution, extreme temperature, and climate
+variability affect chronic respiratory disease — particularly **COPD** — across
+scales ranging from individual lung-function decline to country-level mortality.
+I combine clinical cohorts, administrative health data, and global ecological
+analyses with reproducible statistical pipelines.
+
+## Research interests
+
+- Air pollution, climate & chronic respiratory disease (COPD, asthma)
+- Extreme temperature and humidity effects on COPD morbidity and mortality
+- Eosinophilic COPD and susceptibility to particulate air pollution
+- Global and country-level analyses of climate-related respiratory mortality
+- Occupational & environmental exposure — metal fume PM2.5, volatile organic compounds
+- Reproducible biostatistics — R, Quarto, high-performance computing
+
+## Current position
+
+- **Postdoctoral Research Fellow**, University of British Columbia <!-- TODO: dept / lab -->

@@ -1,0 +1,27 @@
+---
+title: "Curriculum Vitae"
+---
+
+<!-- Optionally link a PDF CV: place cv.pdf in assets/ and uncomment below -->
+<!-- [{{< fa file-pdf >}} Download full CV (PDF)](assets/cv.pdf){.btn .btn-outline-primary} -->
+
+## Education
+
+- **PhD** — <!-- TODO: field, institution, year -->
+- **MD** — <!-- TODO: institution, year -->
+
+## Appointments
+
+- **Postdoctoral Research Fellow**, University of British Columbia, Canada — 2025–present <!-- TODO confirm start -->
+
+## Research areas
+
+Respiratory epidemiology · Environmental & occupational exposure ·
+Air pollution & wildfire smoke · Population cohort analysis · Biostatistics (R, Quarto)
+
+## Skills
+
+- **Statistical computing:** R, Quarto, reproducible pipelines, high-performance computing (Sockeye)
+- **Methods:** epidemiological study design, survival analysis, cohort & case-crossover designs
+
+<!-- TODO: add grants, awards, teaching, presentations as desired -->
