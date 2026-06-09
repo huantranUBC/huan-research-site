@@ -609,18 +609,8 @@ University of British Columbia, Vancouver Campus<br>
   </div>
 </footer>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Typed.js rotating tagline (only on pages that have the target)
-    var t = document.querySelector('#typed-target');
-    if (t && window.Typed) {
-      new Typed('#typed-target', {
-        strings: t.getAttribute('data-strings').split('|'),
-        typeSpeed: 55, backSpeed: 28, backDelay: 1600,
-        startDelay: 300, loop: true, smartBackspace: true
-      });
-    }
     // Animate-on-scroll: tag section headers and publication cards
     document.querySelectorAll(
       'main h2, main h3, .publications ul > li'

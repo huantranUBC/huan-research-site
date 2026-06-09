@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi" xml:lang="vi"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>huong_dan – Huan Minh Tran</title>
+<title>Hướng dẫn tạo website học thuật cá nhân – Huan Minh Tran</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -169,54 +169,67 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Hướng dẫn tạo website học thuật cá nhân</h1>
+<p class="subtitle lead">Quarto và GitHub Pages</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="hướng-dẫn-tạo-website-học-thuật-cá-nhân-quarto-github-pages" class="level1">
-<h1>Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)</h1>
-<p>Hướng dẫn này dựng một website cá nhân (Home · Publications · Research · CV), miễn phí, tự render lại mỗi khi sửa nội dung. Người dùng chỉ cần biết gõ vài lệnh terminal — <strong>không cần biết lập trình web</strong>.</p>
-<p>Thành phẩm mẫu: <a href="https://huantranubc.github.io/huan-research-site/" class="uri">https://huantranubc.github.io/huan-research-site/</a></p>
-<hr>
-<section id="cần-cài-sẵn-một-lần" class="level2">
-<h2 class="anchored" data-anchor-id="cần-cài-sẵn-một-lần">0. Cần cài sẵn (một lần)</h2>
-<p>Trên máy Mac, mở <strong>Terminal</strong> và cài 3 công cụ:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Homebrew (trình quản lý cài đặt) — nếu chưa có</span></span>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="giới-thiệu" class="level1">
+<h1>Giới thiệu</h1>
+<p>Tài liệu này hướng dẫn dựng một website cá nhân gồm bốn trang (Home, Publications, Research, CV), lưu trữ miễn phí trên GitHub Pages và tự cập nhật mỗi khi sửa nội dung. Người làm theo chỉ cần gõ một số lệnh trong Terminal, không cần biết lập trình web.</p>
+<p>Website mẫu: https://huantranubc.github.io/huan-research-site/</p>
+</section>
+<section id="cài-đặt-công-cụ-làm-một-lần" class="level1">
+<h1>1. Cài đặt công cụ (làm một lần)</h1>
+<p>Trên máy Mac, mở <strong>Terminal</strong> và cài ba công cụ.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Homebrew (trình quản lý cài đặt) — bỏ qua nếu đã có</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/bin/bash</span> <span class="at">-c</span> <span class="st">"</span><span class="va">$(</span><span class="ex">curl</span> <span class="at">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="va">)</span><span class="st">"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Quarto (công cụ dựng website từ file văn bản)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Quarto (dựng website từ file văn bản)</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> quarto</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Git + GitHub CLI (đưa website lên mạng)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Git và GitHub CLI (đưa website lên mạng)</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install git gh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Kiểm tra đã cài được:</p>
+<p>Kiểm tra:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
 </section>
-<section id="tạo-thư-mục-dự-án" class="level2">
-<h2 class="anchored" data-anchor-id="tạo-thư-mục-dự-án">1. Tạo thư mục dự án</h2>
+<section id="tạo-thư-mục-dự-án" class="level1">
+<h1>2. Tạo thư mục dự án</h1>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> ~/ten-website <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ~/ten-website</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Toàn bộ file bên dưới đặt <strong>trực tiếp</strong> trong thư mục này.</p>
-<hr>
+<p>Mọi file bên dưới đặt trực tiếp trong thư mục này.</p>
 </section>
-<section id="các-file-nội-dung" class="level2">
-<h2 class="anchored" data-anchor-id="các-file-nội-dung">2. Các file nội dung</h2>
-<p>Website gồm 4 trang viết bằng Markdown (<code>.qmd</code>) + 2 file cấu hình + 1 file CSS. Markdown rất dễ: <code>**đậm**</code>, <code>*nghiêng*</code>, <code># Tiêu đề</code>, <code>- gạch đầu dòng</code>, <code>[chữ hiển thị](đường-link)</code>.</p>
-<blockquote class="blockquote">
-<p>⚠️ Mẹo quan trọng: trong Markdown, <strong>xuống dòng đơn sẽ bị dính thành 1 dòng</strong>. Muốn ngắt dòng thật (ví dụ khối địa chỉ liên hệ), thêm dấu <code>\</code> ở cuối dòng.</p>
-</blockquote>
-<section id="quarto.yml-cấu-hình-chung-menu-tiêu-đề-theme" class="level3">
-<h3 class="anchored" data-anchor-id="quarto.yml-cấu-hình-chung-menu-tiêu-đề-theme">2.1 <code>_quarto.yml</code> — cấu hình chung (menu, tiêu đề, theme)</h3>
+<section id="các-file-nội-dung" class="level1">
+<h1>3. Các file nội dung</h1>
+<p>Website gồm bốn trang viết bằng Markdown (<code>.qmd</code>), một file cấu hình (<code>_quarto.yml</code>) và một file định dạng (<code>styles.css</code>). Cú pháp Markdown cơ bản: <code>**đậm**</code>, <code>*nghiêng*</code>, <code># Tiêu đề</code>, <code>- gạch đầu dòng</code>, <code>[chữ hiển thị](đường-link)</code>.</p>
+<p>Lưu ý: trong Markdown, xuống dòng đơn sẽ bị gộp thành một dòng. Muốn ngắt dòng thật (ví dụ khối địa chỉ liên hệ), thêm dấu <code>\</code> ở cuối dòng.</p>
+<section id="quarto.yml-cấu-hình-chung" class="level2">
+<h2 class="anchored" data-anchor-id="quarto.yml-cấu-hình-chung">3.1. <code>_quarto.yml</code> — cấu hình chung</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _site</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Họ Tên"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mô tả ngắn về bạn"</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">description</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mô tả ngắn"</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
@@ -234,22 +247,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">href</span><span class="kw">:</span><span class="at"> </span><span class="st">"mailto:email@vidu.com"</span></span>
 <span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">page-footer</span><span class="kw">:</span></span>
 <span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span><span class="at"> </span><span class="st">"© 2026 Họ Tên"</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">right</span><span class="kw">:</span><span class="at"> </span><span class="st">"Built with [Quarto](https://quarto.org)"</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span><span class="co">        # đổi theme tại đây: flatly, litera, lux, journal...</span></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">body-width</span><span class="kw">:</span><span class="at"> 900px</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span><span class="co">        # đổi theme: flatly, litera, lux, journal...</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> styles.css</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">grid</span><span class="kw">:</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">body-width</span><span class="kw">:</span><span class="at"> 900px</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="index.qmd-trang-chủ-ảnh-giới-thiệu" class="level3">
-<h3 class="anchored" data-anchor-id="index.qmd-trang-chủ-ảnh-giới-thiệu">2.2 <code>index.qmd</code> — trang chủ (ảnh + giới thiệu)</h3>
+<section id="index.qmd-trang-chủ" class="level2">
+<h2 class="anchored" data-anchor-id="index.qmd-trang-chủ">3.2. <code>index.qmd</code> — trang chủ</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Họ Tên, MD, PhD"</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">about:</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">  template: trestles          # kiểu bố cục có ảnh bên trái</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">  template: trestles</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">  image: assets/profile.jpg</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">  image-shape: round</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">  links:</span></span>
@@ -278,8 +290,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>Địa chỉ\</span>
 <span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">email@vidu.com</span><span class="co">](mailto:email@vidu.com)</span> · +1 234 567 8900</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="publications.qmd-danh-sách-bài-báo" class="level3">
-<h3 class="anchored" data-anchor-id="publications.qmd-danh-sách-bài-báo">2.3 <code>publications.qmd</code> — danh sách bài báo</h3>
+<section id="publications.qmd-danh-sách-bài-báo" class="level2">
+<h2 class="anchored" data-anchor-id="publications.qmd-danh-sách-bài-báo">3.3. <code>publications.qmd</code> — danh sách bài báo</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Publications"</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -304,26 +316,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Họ Tên**, … (2024). *Tên abstract.* Hội nghị.</span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p>Để tên mình <strong>in đậm</strong>. <code>[DOI](...)</code> sẽ tự thành nút bấm (nhờ CSS bên dưới).</p>
-</blockquote>
+<p>Tên mình để in đậm. <code>[DOI](...)</code> sẽ thành nút bấm nhờ CSS bên dưới.</p>
 </section>
-<section id="projects.qmd-hướng-nghiên-cứu" class="level3">
-<h3 class="anchored" data-anchor-id="projects.qmd-hướng-nghiên-cứu">2.4 <code>projects.qmd</code> — hướng nghiên cứu</h3>
+<section id="projects.qmd-hướng-nghiên-cứu" class="level2">
+<h2 class="anchored" data-anchor-id="projects.qmd-hướng-nghiên-cứu">3.4. <code>projects.qmd</code> — hướng nghiên cứu</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Research"</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chủ đề A</span></span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Mô tả 1–2 câu.</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>Mô tả một đến hai câu.</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chủ đề B</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>Mô tả 1–2 câu.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>Mô tả một đến hai câu.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="cv.qmd-lý-lịch" class="level3">
-<h3 class="anchored" data-anchor-id="cv.qmd-lý-lịch">2.5 <code>cv.qmd</code> — lý lịch</h3>
+<section id="cv.qmd-lý-lịch" class="level2">
+<h2 class="anchored" data-anchor-id="cv.qmd-lý-lịch">3.5. <code>cv.qmd</code> — lý lịch</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Curriculum Vitae"</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -349,35 +359,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kỹ năng 1</span>
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kỹ năng 2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="styles.css-làm-đẹp-font-màu-thẻ-publication" class="level3">
-<h3 class="anchored" data-anchor-id="styles.css-làm-đẹp-font-màu-thẻ-publication">2.6 <code>styles.css</code> — làm đẹp (font, màu, thẻ publication)</h3>
-<p>Copy nguyên file <code>styles.css</code> trong repo này (font Newsreader + Source Sans, publication dạng thẻ bo góc, DOI thành nút badge). Đổi màu nhấn ở dòng <code>--accent: #0d3b66;</code>.</p>
+<section id="styles.css-định-dạng" class="level2">
+<h2 class="anchored" data-anchor-id="styles.css-định-dạng">3.6. <code>styles.css</code> — định dạng</h2>
+<p>Copy file <code>styles.css</code> từ repo mẫu (font Newsreader và Source Sans, publication dạng thẻ bo góc, DOI thành nút). Đổi màu nhấn tại dòng <code>--accent: #0d3b66;</code>.</p>
 </section>
-<section id="ảnh-chân-dung" class="level3">
-<h3 class="anchored" data-anchor-id="ảnh-chân-dung">2.7 Ảnh chân dung</h3>
+<section id="ảnh-chân-dung" class="level2">
+<h2 class="anchored" data-anchor-id="ảnh-chân-dung">3.7. Ảnh chân dung</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/ten-website/assets</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> ~/Downloads/anh-cua-ban.jpg ~/ten-website/assets/profile.jpg</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
 </section>
 </section>
-<section id="xem-thử-trên-máy-trước-khi-đưa-lên-mạng" class="level2">
-<h2 class="anchored" data-anchor-id="xem-thử-trên-máy-trước-khi-đưa-lên-mạng">3. Xem thử trên máy (trước khi đưa lên mạng)</h2>
+<section id="xem-thử-trên-máy" class="level1">
+<h1>4. Xem thử trên máy</h1>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ten-website</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render          <span class="co"># dựng website vào thư mục _site/</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview         <span class="co"># mở trình duyệt xem trực tiếp, tự cập nhật khi sửa file</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Sửa file <code>.qmd</code> → lưu → trang tự load lại. Ưng ý thì sang bước đưa lên mạng.</p>
-<hr>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview         <span class="co"># mở trình duyệt, tự cập nhật khi sửa file</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Sửa file <code>.qmd</code>, lưu lại, trang tự load lại. Ưng ý thì chuyển sang bước đưa lên mạng.</p>
 </section>
-<section id="đưa-lên-mạng-github-pages-miễn-phí" class="level2">
-<h2 class="anchored" data-anchor-id="đưa-lên-mạng-github-pages-miễn-phí">4. Đưa lên mạng (GitHub Pages — miễn phí)</h2>
-<section id="đăng-nhập-github-một-lần" class="level3">
-<h3 class="anchored" data-anchor-id="đăng-nhập-github-một-lần">4.1 Đăng nhập GitHub (một lần)</h3>
+<section id="đưa-lên-mạng-github-pages" class="level1">
+<h1>5. Đưa lên mạng (GitHub Pages)</h1>
+<section id="đăng-nhập-github-một-lần" class="level2">
+<h2 class="anchored" data-anchor-id="đăng-nhập-github-một-lần">5.1. Đăng nhập GitHub (một lần)</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> auth login</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Chọn lần lượt: <strong>GitHub.com → HTTPS → Yes → Login with a web browser</strong>. Màn hình hiện mã <code>XXXX-XXXX</code> → Enter để mở trình duyệt → dán mã → <strong>Authorize</strong>.</p>
+<p>Chọn lần lượt: GitHub.com, HTTPS, Yes, Login with a web browser. Màn hình hiện mã <code>XXXX-XXXX</code>, nhấn Enter để mở trình duyệt, dán mã, chọn Authorize.</p>
 </section>
-<section id="file-tự-deploy-.githubworkflowspublish.yml" class="level3">
-<h3 class="anchored" data-anchor-id="file-tự-deploy-.githubworkflowspublish.yml">4.2 File tự-deploy <code>.github/workflows/publish.yml</code></h3>
-<p>Tạo file này (GitHub sẽ tự render + đẩy web mỗi lần <code>git push</code>):</p>
+<section id="file-tự-cập-nhật-.githubworkflowspublish.yml" class="level2">
+<h2 class="anchored" data-anchor-id="file-tự-cập-nhật-.githubworkflowspublish.yml">5.2. File tự cập nhật <code>.github/workflows/publish.yml</code></h2>
+<p>Tạo file này để GitHub tự dựng và đẩy web mỗi lần <code>git push</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Publish website</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
@@ -403,21 +411,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">env</span><span class="kw">:</span></span>
 <span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">GITHUB_TOKEN</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="thêm-.gitignore-không-đẩy-thư-mục-build" class="level3">
-<h3 class="anchored" data-anchor-id="thêm-.gitignore-không-đẩy-thư-mục-build">4.3 Thêm <code>.gitignore</code> (không đẩy thư mục build)</h3>
+<section id="thêm-.gitignore" class="level2">
+<h2 class="anchored" data-anchor-id="thêm-.gitignore">5.3. Thêm <code>.gitignore</code></h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">printf</span> <span class="st">"_site/\n.quarto/\n"</span> <span class="op">&gt;</span> ~/ten-website/.gitignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="tạo-repo-đẩy-code-lần-đầu" class="level3">
-<h3 class="anchored" data-anchor-id="tạo-repo-đẩy-code-lần-đầu">4.4 Tạo repo + đẩy code lần đầu</h3>
+<section id="tạo-repo-và-đẩy-code-lần-đầu" class="level2">
+<h2 class="anchored" data-anchor-id="tạo-repo-và-đẩy-code-lần-đầu">5.4. Tạo repo và đẩy code lần đầu</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ten-website</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init <span class="at">-b</span> main</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initial website"</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> repo create ten-website <span class="at">--public</span> <span class="at">--source</span><span class="op">=</span>. <span class="at">--push</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="mồi-nhánh-gh-pages-tránh-lỗi-con-gàquả-trứng" class="level3">
-<h3 class="anchored" data-anchor-id="mồi-nhánh-gh-pages-tránh-lỗi-con-gàquả-trứng">4.5 Mồi nhánh <code>gh-pages</code> (tránh lỗi “con gà–quả trứng”)</h3>
-<p>Lần đầu nhánh <code>gh-pages</code> chưa tồn tại nên workflow báo lỗi. Tạo nhánh rỗng để mồi:</p>
+<section id="tạo-nhánh-gh-pages-ban-đầu" class="level2">
+<h2 class="anchored" data-anchor-id="tạo-nhánh-gh-pages-ban-đầu">5.5. Tạo nhánh <code>gh-pages</code> ban đầu</h2>
+<p>Lần đầu nhánh <code>gh-pages</code> chưa tồn tại nên workflow sẽ báo lỗi. Tạo nhánh rỗng để khởi tạo:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--orphan</span> gh-pages</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">-rf</span> . <span class="op">&gt;</span>/dev/null <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"building..."</span> <span class="op">&gt;</span> index.html</span>
@@ -426,43 +434,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin gh-pages</span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="bật-github-pages" class="level3">
-<h3 class="anchored" data-anchor-id="bật-github-pages">4.6 Bật GitHub Pages</h3>
+<section id="bật-github-pages" class="level2">
+<h2 class="anchored" data-anchor-id="bật-github-pages">5.6. Bật GitHub Pages</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> api <span class="at">-X</span> POST repos/USERNAME/ten-website/pages <span class="dt">\</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-f</span> source<span class="pp">[</span><span class="ss">branch</span><span class="pp">]</span>=gh-pages <span class="at">-f</span> source<span class="pp">[</span><span class="ss">path</span><span class="pp">]</span>=/ <span class="dv">2</span><span class="op">&gt;</span>/dev/null <span class="kw">||</span> <span class="fu">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>(Hoặc vào <strong>GitHub → repo → Settings → Pages → Source: gh-pages /(root) → Save</strong>.)</p>
+<p>Hoặc vào GitHub, repo, Settings, Pages, chọn Source là <code>gh-pages</code> và <code>/(root)</code>, rồi Save.</p>
 </section>
-<section id="chạy-lại-workflow-để-render-bản-thật" class="level3">
-<h3 class="anchored" data-anchor-id="chạy-lại-workflow-để-render-bản-thật">4.7 Chạy lại workflow để render bản thật</h3>
+<section id="chạy-workflow-để-dựng-bản-thật" class="level2">
+<h2 class="anchored" data-anchor-id="chạy-workflow-để-dựng-bản-thật">5.7. Chạy workflow để dựng bản thật</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> workflow run publish.yml</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> run watch    <span class="co"># theo dõi đến khi success</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Sau ~1 phút website live tại:</p>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">gh</span> run watch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Sau khoảng một phút website chạy tại:</p>
 <pre><code>https://USERNAME.github.io/ten-website/</code></pre>
-<blockquote class="blockquote">
-<p>📌 Quay lại <code>_quarto.yml</code> sửa <code>site-url</code> thành đúng địa chỉ này.</p>
-</blockquote>
-<hr>
+<p>Quay lại <code>_quarto.yml</code>, sửa <code>site-url</code> thành địa chỉ này.</p>
 </section>
 </section>
-<section id="cập-nhật-về-sau-chỉ-2-lệnh" class="level2">
-<h2 class="anchored" data-anchor-id="cập-nhật-về-sau-chỉ-2-lệnh">5. Cập nhật về sau (chỉ 2 lệnh)</h2>
+<section id="cập-nhật-về-sau" class="level1">
+<h1>6. Cập nhật về sau</h1>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/ten-website</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ... sửa nội dung trong các file .qmd ...</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># sửa nội dung trong các file .qmd</span></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span> <span class="kw">&amp;&amp;</span> <span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Cập nhật nội dung"</span> <span class="kw">&amp;&amp;</span> <span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>GitHub tự render lại + đẩy web trong khoảng 1 phút. Xem lại nhớ <strong>Cmd + Shift + R</strong> để bỏ cache trình duyệt.</p>
-<hr>
+<p>GitHub tự dựng lại và đẩy web trong khoảng một phút. Khi xem lại, nhấn Cmd + Shift + R để bỏ cache trình duyệt.</p>
 </section>
-<section id="lấy-doi-tự-động-cho-danh-sách-bài-báo-tùy-chọn" class="level2">
-<h2 class="anchored" data-anchor-id="lấy-doi-tự-động-cho-danh-sách-bài-báo-tùy-chọn">6. Lấy DOI tự động cho danh sách bài báo (tùy chọn)</h2>
-<p>Nếu đã có <strong>ORCID</strong>, lấy toàn bộ DOI chính chủ:</p>
+<section id="lấy-doi-từ-orcid-tùy-chọn" class="level1">
+<h1>7. Lấy DOI từ ORCID (tùy chọn)</h1>
+<p>Nếu đã có ORCID, lấy toàn bộ DOI:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> <span class="at">-H</span> <span class="st">"Accept: application/json"</span> <span class="dt">\</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://pub.orcid.org/v3.0/0000-0000-0000-0000/works"</span> <span class="dt">\</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-o</span> <span class="st">'10\.[0-9]\{4,\}/[^"]*'</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-u</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Bài nào ORCID thiếu thì tra thêm trên <a href="https://search.crossref.org" class="uri">https://search.crossref.org</a> theo tên bài.</p>
-<hr>
+<p>Bài nào ORCID thiếu thì tra thêm trên https://search.crossref.org theo tên bài.</p>
 </section>
-<section id="lỗi-thường-gặp" class="level2">
-<h2 class="anchored" data-anchor-id="lỗi-thường-gặp">7. Lỗi thường gặp</h2>
+<section id="hiệu-ứng-động-tùy-chọn" class="level1">
+<h1>8. Hiệu ứng động (tùy chọn)</h1>
+<p>Thêm chữ tự gõ và hiệu ứng cuộn trang. Trong <code>_quarto.yml</code>, mục <code>format: html:</code>, thêm:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">include-in-header</span><span class="kw">:</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">      - </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="ch">|</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>          &lt;link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"&gt;</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">include-after-body</span><span class="kw">:</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="kw">      - </span><span class="fu">text</span><span class="kw">:</span><span class="at"> </span><span class="ch">|</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>          &lt;script src="https://unpkg.com/aos@2.3.4/dist/aos.js"&gt;&lt;/script&gt;</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>          &lt;script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"&gt;&lt;/script&gt;</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>          &lt;script&gt;</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>            document.addEventListener('DOMContentLoaded', function () {</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>              var t = document.querySelector('#typed-target');</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>              if (t &amp;&amp; window.Typed) {</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                new Typed('#typed-target', {</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>                  strings: t.getAttribute('data-strings').split('|'),</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>                  typeSpeed: 55, backSpeed: 28, backDelay: 1600,</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>                  startDelay: 300, loop: true, smartBackspace: true</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>                });</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>              }</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>              document.querySelectorAll('main h2, main h3, .publications ul &gt; li')</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>                .forEach(function (el) { el.setAttribute('data-aos', 'fade-up'); });</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>              if (window.AOS) AOS.init({ once: true, offset: 60 });</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>            });</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>          &lt;/script&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Trong <code>index.qmd</code>, thêm dòng chữ tự gõ:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>::: {.typed-tagline}</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> id</span><span class="op">=</span><span class="st">"typed-target"</span><span class="ot"> data-strings</span><span class="op">=</span><span class="st">"Vai trò 1|Vai trò 2|Vai trò 3"</span><span class="dt">&gt;&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="lỗi-thường-gặp" class="level1">
+<h1>9. Lỗi thường gặp</h1>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -476,32 +509,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>Workflow fail lần đầu, log nói thiếu <code>gh-pages</code></td>
-<td>Làm bước <strong>4.5</strong> mồi nhánh rồi chạy lại</td>
+<td>Workflow lỗi lần đầu, log báo thiếu <code>gh-pages</code></td>
+<td>Làm bước 5.5 tạo nhánh rồi chạy lại</td>
 </tr>
 <tr class="even">
 <td>Sửa xong web vẫn nội dung cũ</td>
-<td>Cache trình duyệt → <strong>Cmd+Shift+R</strong> hoặc cửa sổ ẩn danh</td>
+<td>Cache trình duyệt, dùng Cmd+Shift+R</td>
 </tr>
 <tr class="odd">
-<td>Khối địa chỉ/liên hệ dính thành 1 dòng</td>
-<td>Thêm dấu <code>\</code> ở cuối mỗi dòng cần ngắt</td>
+<td>Khối địa chỉ dính thành một dòng</td>
+<td>Thêm dấu <code>\</code> cuối mỗi dòng cần ngắt</td>
 </tr>
 <tr class="even">
 <td>Ảnh không hiện</td>
-<td>Kiểm tra file nằm đúng <code>assets/profile.jpg</code> và đường dẫn trong <code>index.qmd</code></td>
+<td>Kiểm tra file ở <code>assets/profile.jpg</code> và đường dẫn trong <code>index.qmd</code></td>
 </tr>
 <tr class="odd">
-<td>Đổi theme</td>
-<td>Sửa <code>theme:</code> trong <code>_quarto.yml</code> (cosmo, flatly, litera, lux, journal, …)</td>
+<td>Đổi giao diện</td>
+<td>Sửa <code>theme:</code> trong <code>_quarto.yml</code> (cosmo, flatly, litera, lux, journal)</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<p><em>Mọi chỗ ghi <code>USERNAME</code> / <code>ten-website</code> / <code>Họ Tên</code> / <code>email@vidu.com</code> thay bằng thông tin thật.</em></p>
+<p>Mọi chỗ ghi <code>USERNAME</code>, <code>ten-website</code>, <code>Họ Tên</code>, <code>email@vidu.com</code> thay bằng thông tin thật.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -920,18 +951,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </footer>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Typed.js rotating tagline (only on pages that have the target)
-    var t = document.querySelector('#typed-target');
-    if (t && window.Typed) {
-      new Typed('#typed-target', {
-        strings: t.getAttribute('data-strings').split('|'),
-        typeSpeed: 55, backSpeed: 28, backDelay: 1600,
-        startDelay: 300, loop: true, smartBackspace: true
-      });
-    }
     // Animate-on-scroll: tag section headers and publication cards
     document.querySelectorAll(
       'main h2, main h3, .publications ul > li'

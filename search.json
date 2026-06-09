@@ -2,72 +2,114 @@
   {
     "objectID": "HUONG_DAN.html",
     "href": "HUONG_DAN.html",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
     "section": "",
-    "text": "Hướng dẫn này dựng một website cá nhân (Home · Publications · Research · CV), miễn phí, tự render lại mỗi khi sửa nội dung. Người dùng chỉ cần biết gõ vài lệnh terminal — không cần biết lập trình web.\nThành phẩm mẫu: https://huantranubc.github.io/huan-research-site/\n\n\n\nTrên máy Mac, mở Terminal và cài 3 công cụ:\n# 1) Homebrew (trình quản lý cài đặt) — nếu chưa có\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n# 2) Quarto (công cụ dựng website từ file văn bản)\nbrew install --cask quarto\n\n# 3) Git + GitHub CLI (đưa website lên mạng)\nbrew install git gh\nKiểm tra đã cài được:\nquarto --version\ngit --version\ngh --version\n\n\n\n\nmkdir ~/ten-website && cd ~/ten-website\nToàn bộ file bên dưới đặt trực tiếp trong thư mục này.\n\n\n\n\nWebsite gồm 4 trang viết bằng Markdown (.qmd) + 2 file cấu hình + 1 file CSS. Markdown rất dễ: **đậm**, *nghiêng*, # Tiêu đề, - gạch đầu dòng, [chữ hiển thị](đường-link).\n\n⚠️ Mẹo quan trọng: trong Markdown, xuống dòng đơn sẽ bị dính thành 1 dòng. Muốn ngắt dòng thật (ví dụ khối địa chỉ liên hệ), thêm dấu \\ ở cuối dòng.\n\n\n\nproject:\n  type: website\n  output-dir: _site\n\nwebsite:\n  title: \"Họ Tên\"\n  description: \"Mô tả ngắn về bạn\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: publications.qmd\n        text: Publications\n      - href: projects.qmd\n        text: Research\n      - href: cv.qmd\n        text: CV\n    right:\n      - icon: github\n        href: https://github.com/USERNAME\n      - icon: envelope\n        href: \"mailto:email@vidu.com\"\n  page-footer:\n    left: \"© 2026 Họ Tên\"\n    right: \"Built with [Quarto](https://quarto.org)\"\n\nformat:\n  html:\n    theme: cosmo        # đổi theme tại đây: flatly, litera, lux, journal...\n    css: styles.css\n    toc: false\n    grid:\n      body-width: 900px\n\n\n\n---\ntitle: \"Họ Tên, MD, PhD\"\nabout:\n  template: trestles          # kiểu bố cục có ảnh bên trái\n  image: assets/profile.jpg\n  image-shape: round\n  links:\n    - icon: envelope\n      text: Email\n      href: \"mailto:email@vidu.com\"\n    - icon: github\n      text: GitHub\n      href: https://github.com/USERNAME\n    - text: \"ORCID\"\n      href: https://orcid.org/0000-0000-0000-0000\n    - text: \"Google Scholar\"\n      href: https://scholar.google.com/citations?user=XXXX\n---\n\nMột đoạn giới thiệu ngắn về vị trí và hướng nghiên cứu.\n\n## Research interests\n\n- Chủ đề 1\n- Chủ đề 2\n\n## Contact\n\nĐơn vị công tác\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com) · +1 234 567 8900\n\n\n\n---\ntitle: \"Publications\"\n---\n\n::: {.publications}\n\n## Peer-reviewed journal articles\n\n### 2025\n\n- **Họ Tên**, Đồng tác giả … (2025).\n  *Tên bài báo.* Tên tạp chí.\n  [DOI](https://doi.org/10.xxxx/xxxxx)\n\n### 2024\n\n- **Họ Tên**, … (2024). *Tên bài.* Tạp chí.\n  [DOI](https://doi.org/...)\n\n## Conference abstracts & proceedings\n\n- **Họ Tên**, … (2024). *Tên abstract.* Hội nghị.\n\n:::\n\nĐể tên mình in đậm. [DOI](...) sẽ tự thành nút bấm (nhờ CSS bên dưới).\n\n\n\n\n---\ntitle: \"Research\"\n---\n\n## Chủ đề A\n\nMô tả 1–2 câu.\n\n## Chủ đề B\n\nMô tả 1–2 câu.\n\n\n\n---\ntitle: \"Curriculum Vitae\"\n---\n\n## Contact\n\n**Họ Tên, MD, PhD**\\\nChức danh, Đơn vị\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com)\n\n## Education\n\n- **PhD** — Trường, Quốc gia\n- **MD** — Trường, Quốc gia\n\n## Appointments\n\n- **Chức danh**, Đơn vị, Năm\n\n## Skills\n\n- Kỹ năng 1\n- Kỹ năng 2\n\n\n\nCopy nguyên file styles.css trong repo này (font Newsreader + Source Sans, publication dạng thẻ bo góc, DOI thành nút badge). Đổi màu nhấn ở dòng --accent: #0d3b66;.\n\n\n\nmkdir -p ~/ten-website/assets\ncp ~/Downloads/anh-cua-ban.jpg ~/ten-website/assets/profile.jpg\n\n\n\n\n\ncd ~/ten-website\nquarto render          # dựng website vào thư mục _site/\nquarto preview         # mở trình duyệt xem trực tiếp, tự cập nhật khi sửa file\nSửa file .qmd → lưu → trang tự load lại. Ưng ý thì sang bước đưa lên mạng.\n\n\n\n\n\n\ngh auth login\nChọn lần lượt: GitHub.com → HTTPS → Yes → Login with a web browser. Màn hình hiện mã XXXX-XXXX → Enter để mở trình duyệt → dán mã → Authorize.\n\n\n\nTạo file này (GitHub sẽ tự render + đẩy web mỗi lần git push):\nname: Publish website\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\npermissions:\n  contents: write\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n      - name: Render and publish to gh-pages\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n\n\n\nprintf \"_site/\\n.quarto/\\n\" &gt; ~/ten-website/.gitignore\n\n\n\ncd ~/ten-website\ngit init -b main\ngit add -A\ngit commit -m \"Initial website\"\ngh repo create ten-website --public --source=. --push\n\n\n\nLần đầu nhánh gh-pages chưa tồn tại nên workflow báo lỗi. Tạo nhánh rỗng để mồi:\ngit checkout --orphan gh-pages\ngit rm -rf . &gt;/dev/null 2&gt;&1\necho \"building...\" &gt; index.html\ngit add index.html\ngit commit -m \"Init gh-pages\"\ngit push -u origin gh-pages\ngit checkout main\n\n\n\ngh api -X POST repos/USERNAME/ten-website/pages \\\n  -f source[branch]=gh-pages -f source[path]=/ 2&gt;/dev/null || true\n(Hoặc vào GitHub → repo → Settings → Pages → Source: gh-pages /(root) → Save.)\n\n\n\ngh workflow run publish.yml\ngh run watch    # theo dõi đến khi success\nSau ~1 phút website live tại:\nhttps://USERNAME.github.io/ten-website/\n\n📌 Quay lại _quarto.yml sửa site-url thành đúng địa chỉ này.\n\n\n\n\n\n\ncd ~/ten-website\n# ... sửa nội dung trong các file .qmd ...\ngit add -A && git commit -m \"Cập nhật nội dung\" && git push\nGitHub tự render lại + đẩy web trong khoảng 1 phút. Xem lại nhớ Cmd + Shift + R để bỏ cache trình duyệt.\n\n\n\n\nNếu đã có ORCID, lấy toàn bộ DOI chính chủ:\ncurl -s -H \"Accept: application/json\" \\\n  \"https://pub.orcid.org/v3.0/0000-0000-0000-0000/works\" \\\n  | grep -o '10\\.[0-9]\\{4,\\}/[^\"]*' | sort -u\nBài nào ORCID thiếu thì tra thêm trên https://search.crossref.org theo tên bài.\n\n\n\n\n\n\n\n\n\n\n\nHiện tượng\nCách xử lý\n\n\n\n\nWorkflow fail lần đầu, log nói thiếu gh-pages\nLàm bước 4.5 mồi nhánh rồi chạy lại\n\n\nSửa xong web vẫn nội dung cũ\nCache trình duyệt → Cmd+Shift+R hoặc cửa sổ ẩn danh\n\n\nKhối địa chỉ/liên hệ dính thành 1 dòng\nThêm dấu \\ ở cuối mỗi dòng cần ngắt\n\n\nẢnh không hiện\nKiểm tra file nằm đúng assets/profile.jpg và đường dẫn trong index.qmd\n\n\nĐổi theme\nSửa theme: trong _quarto.yml (cosmo, flatly, litera, lux, journal, …)\n\n\n\n\nMọi chỗ ghi USERNAME / ten-website / Họ Tên / email@vidu.com thay bằng thông tin thật."
+    "text": "Tài liệu này hướng dẫn dựng một website cá nhân gồm bốn trang (Home, Publications, Research, CV), lưu trữ miễn phí trên GitHub Pages và tự cập nhật mỗi khi sửa nội dung. Người làm theo chỉ cần gõ một số lệnh trong Terminal, không cần biết lập trình web.\nWebsite mẫu: https://huantranubc.github.io/huan-research-site/"
   },
   {
-    "objectID": "HUONG_DAN.html#cần-cài-sẵn-một-lần",
-    "href": "HUONG_DAN.html#cần-cài-sẵn-một-lần",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "Trên máy Mac, mở Terminal và cài 3 công cụ:\n# 1) Homebrew (trình quản lý cài đặt) — nếu chưa có\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n# 2) Quarto (công cụ dựng website từ file văn bản)\nbrew install --cask quarto\n\n# 3) Git + GitHub CLI (đưa website lên mạng)\nbrew install git gh\nKiểm tra đã cài được:\nquarto --version\ngit --version\ngh --version"
+    "objectID": "HUONG_DAN.html#quarto.yml-cấu-hình-chung",
+    "href": "HUONG_DAN.html#quarto.yml-cấu-hình-chung",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "3.1. _quarto.yml — cấu hình chung",
+    "text": "3.1. _quarto.yml — cấu hình chung\nproject:\n  type: website\n  output-dir: _site\n\nwebsite:\n  title: \"Họ Tên\"\n  description: \"Mô tả ngắn\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: publications.qmd\n        text: Publications\n      - href: projects.qmd\n        text: Research\n      - href: cv.qmd\n        text: CV\n    right:\n      - icon: github\n        href: https://github.com/USERNAME\n      - icon: envelope\n        href: \"mailto:email@vidu.com\"\n  page-footer:\n    left: \"© 2026 Họ Tên\"\n\nformat:\n  html:\n    theme: cosmo        # đổi theme: flatly, litera, lux, journal...\n    css: styles.css\n    toc: false\n    grid:\n      body-width: 900px"
   },
   {
-    "objectID": "HUONG_DAN.html#tạo-thư-mục-dự-án",
-    "href": "HUONG_DAN.html#tạo-thư-mục-dự-án",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "mkdir ~/ten-website && cd ~/ten-website\nToàn bộ file bên dưới đặt trực tiếp trong thư mục này."
+    "objectID": "HUONG_DAN.html#index.qmd-trang-chủ",
+    "href": "HUONG_DAN.html#index.qmd-trang-chủ",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "3.2. index.qmd — trang chủ",
+    "text": "3.2. index.qmd — trang chủ\n---\ntitle: \"Họ Tên, MD, PhD\"\nabout:\n  template: trestles\n  image: assets/profile.jpg\n  image-shape: round\n  links:\n    - icon: envelope\n      text: Email\n      href: \"mailto:email@vidu.com\"\n    - icon: github\n      text: GitHub\n      href: https://github.com/USERNAME\n    - text: \"ORCID\"\n      href: https://orcid.org/0000-0000-0000-0000\n    - text: \"Google Scholar\"\n      href: https://scholar.google.com/citations?user=XXXX\n---\n\nMột đoạn giới thiệu ngắn về vị trí và hướng nghiên cứu.\n\n## Research interests\n\n- Chủ đề 1\n- Chủ đề 2\n\n## Contact\n\nĐơn vị công tác\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com) · +1 234 567 8900"
   },
   {
-    "objectID": "HUONG_DAN.html#các-file-nội-dung",
-    "href": "HUONG_DAN.html#các-file-nội-dung",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "Website gồm 4 trang viết bằng Markdown (.qmd) + 2 file cấu hình + 1 file CSS. Markdown rất dễ: **đậm**, *nghiêng*, # Tiêu đề, - gạch đầu dòng, [chữ hiển thị](đường-link).\n\n⚠️ Mẹo quan trọng: trong Markdown, xuống dòng đơn sẽ bị dính thành 1 dòng. Muốn ngắt dòng thật (ví dụ khối địa chỉ liên hệ), thêm dấu \\ ở cuối dòng.\n\n\n\nproject:\n  type: website\n  output-dir: _site\n\nwebsite:\n  title: \"Họ Tên\"\n  description: \"Mô tả ngắn về bạn\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: publications.qmd\n        text: Publications\n      - href: projects.qmd\n        text: Research\n      - href: cv.qmd\n        text: CV\n    right:\n      - icon: github\n        href: https://github.com/USERNAME\n      - icon: envelope\n        href: \"mailto:email@vidu.com\"\n  page-footer:\n    left: \"© 2026 Họ Tên\"\n    right: \"Built with [Quarto](https://quarto.org)\"\n\nformat:\n  html:\n    theme: cosmo        # đổi theme tại đây: flatly, litera, lux, journal...\n    css: styles.css\n    toc: false\n    grid:\n      body-width: 900px\n\n\n\n---\ntitle: \"Họ Tên, MD, PhD\"\nabout:\n  template: trestles          # kiểu bố cục có ảnh bên trái\n  image: assets/profile.jpg\n  image-shape: round\n  links:\n    - icon: envelope\n      text: Email\n      href: \"mailto:email@vidu.com\"\n    - icon: github\n      text: GitHub\n      href: https://github.com/USERNAME\n    - text: \"ORCID\"\n      href: https://orcid.org/0000-0000-0000-0000\n    - text: \"Google Scholar\"\n      href: https://scholar.google.com/citations?user=XXXX\n---\n\nMột đoạn giới thiệu ngắn về vị trí và hướng nghiên cứu.\n\n## Research interests\n\n- Chủ đề 1\n- Chủ đề 2\n\n## Contact\n\nĐơn vị công tác\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com) · +1 234 567 8900\n\n\n\n---\ntitle: \"Publications\"\n---\n\n::: {.publications}\n\n## Peer-reviewed journal articles\n\n### 2025\n\n- **Họ Tên**, Đồng tác giả … (2025).\n  *Tên bài báo.* Tên tạp chí.\n  [DOI](https://doi.org/10.xxxx/xxxxx)\n\n### 2024\n\n- **Họ Tên**, … (2024). *Tên bài.* Tạp chí.\n  [DOI](https://doi.org/...)\n\n## Conference abstracts & proceedings\n\n- **Họ Tên**, … (2024). *Tên abstract.* Hội nghị.\n\n:::\n\nĐể tên mình in đậm. [DOI](...) sẽ tự thành nút bấm (nhờ CSS bên dưới).\n\n\n\n\n---\ntitle: \"Research\"\n---\n\n## Chủ đề A\n\nMô tả 1–2 câu.\n\n## Chủ đề B\n\nMô tả 1–2 câu.\n\n\n\n---\ntitle: \"Curriculum Vitae\"\n---\n\n## Contact\n\n**Họ Tên, MD, PhD**\\\nChức danh, Đơn vị\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com)\n\n## Education\n\n- **PhD** — Trường, Quốc gia\n- **MD** — Trường, Quốc gia\n\n## Appointments\n\n- **Chức danh**, Đơn vị, Năm\n\n## Skills\n\n- Kỹ năng 1\n- Kỹ năng 2\n\n\n\nCopy nguyên file styles.css trong repo này (font Newsreader + Source Sans, publication dạng thẻ bo góc, DOI thành nút badge). Đổi màu nhấn ở dòng --accent: #0d3b66;.\n\n\n\nmkdir -p ~/ten-website/assets\ncp ~/Downloads/anh-cua-ban.jpg ~/ten-website/assets/profile.jpg"
+    "objectID": "HUONG_DAN.html#publications.qmd-danh-sách-bài-báo",
+    "href": "HUONG_DAN.html#publications.qmd-danh-sách-bài-báo",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "3.3. publications.qmd — danh sách bài báo",
+    "text": "3.3. publications.qmd — danh sách bài báo\n---\ntitle: \"Publications\"\n---\n\n::: {.publications}\n\n## Peer-reviewed journal articles\n\n### 2025\n\n- **Họ Tên**, Đồng tác giả … (2025).\n  *Tên bài báo.* Tên tạp chí.\n  [DOI](https://doi.org/10.xxxx/xxxxx)\n\n### 2024\n\n- **Họ Tên**, … (2024). *Tên bài.* Tạp chí.\n  [DOI](https://doi.org/...)\n\n## Conference abstracts & proceedings\n\n- **Họ Tên**, … (2024). *Tên abstract.* Hội nghị.\n\n:::\nTên mình để in đậm. [DOI](...) sẽ thành nút bấm nhờ CSS bên dưới."
   },
   {
-    "objectID": "HUONG_DAN.html#xem-thử-trên-máy-trước-khi-đưa-lên-mạng",
-    "href": "HUONG_DAN.html#xem-thử-trên-máy-trước-khi-đưa-lên-mạng",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "cd ~/ten-website\nquarto render          # dựng website vào thư mục _site/\nquarto preview         # mở trình duyệt xem trực tiếp, tự cập nhật khi sửa file\nSửa file .qmd → lưu → trang tự load lại. Ưng ý thì sang bước đưa lên mạng."
+    "objectID": "HUONG_DAN.html#projects.qmd-hướng-nghiên-cứu",
+    "href": "HUONG_DAN.html#projects.qmd-hướng-nghiên-cứu",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "3.4. projects.qmd — hướng nghiên cứu",
+    "text": "3.4. projects.qmd — hướng nghiên cứu\n---\ntitle: \"Research\"\n---\n\n## Chủ đề A\n\nMô tả một đến hai câu.\n\n## Chủ đề B\n\nMô tả một đến hai câu."
   },
   {
-    "objectID": "HUONG_DAN.html#đưa-lên-mạng-github-pages-miễn-phí",
-    "href": "HUONG_DAN.html#đưa-lên-mạng-github-pages-miễn-phí",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "gh auth login\nChọn lần lượt: GitHub.com → HTTPS → Yes → Login with a web browser. Màn hình hiện mã XXXX-XXXX → Enter để mở trình duyệt → dán mã → Authorize.\n\n\n\nTạo file này (GitHub sẽ tự render + đẩy web mỗi lần git push):\nname: Publish website\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\npermissions:\n  contents: write\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n      - name: Render and publish to gh-pages\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}\n\n\n\nprintf \"_site/\\n.quarto/\\n\" &gt; ~/ten-website/.gitignore\n\n\n\ncd ~/ten-website\ngit init -b main\ngit add -A\ngit commit -m \"Initial website\"\ngh repo create ten-website --public --source=. --push\n\n\n\nLần đầu nhánh gh-pages chưa tồn tại nên workflow báo lỗi. Tạo nhánh rỗng để mồi:\ngit checkout --orphan gh-pages\ngit rm -rf . &gt;/dev/null 2&gt;&1\necho \"building...\" &gt; index.html\ngit add index.html\ngit commit -m \"Init gh-pages\"\ngit push -u origin gh-pages\ngit checkout main\n\n\n\ngh api -X POST repos/USERNAME/ten-website/pages \\\n  -f source[branch]=gh-pages -f source[path]=/ 2&gt;/dev/null || true\n(Hoặc vào GitHub → repo → Settings → Pages → Source: gh-pages /(root) → Save.)\n\n\n\ngh workflow run publish.yml\ngh run watch    # theo dõi đến khi success\nSau ~1 phút website live tại:\nhttps://USERNAME.github.io/ten-website/\n\n📌 Quay lại _quarto.yml sửa site-url thành đúng địa chỉ này."
+    "objectID": "HUONG_DAN.html#cv.qmd-lý-lịch",
+    "href": "HUONG_DAN.html#cv.qmd-lý-lịch",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "3.5. cv.qmd — lý lịch",
+    "text": "3.5. cv.qmd — lý lịch\n---\ntitle: \"Curriculum Vitae\"\n---\n\n## Contact\n\n**Họ Tên, MD, PhD**\\\nChức danh, Đơn vị\\\nĐịa chỉ\\\n[email@vidu.com](mailto:email@vidu.com)\n\n## Education\n\n- **PhD** — Trường, Quốc gia\n- **MD** — Trường, Quốc gia\n\n## Appointments\n\n- **Chức danh**, Đơn vị, Năm\n\n## Skills\n\n- Kỹ năng 1\n- Kỹ năng 2"
   },
   {
-    "objectID": "HUONG_DAN.html#cập-nhật-về-sau-chỉ-2-lệnh",
-    "href": "HUONG_DAN.html#cập-nhật-về-sau-chỉ-2-lệnh",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "cd ~/ten-website\n# ... sửa nội dung trong các file .qmd ...\ngit add -A && git commit -m \"Cập nhật nội dung\" && git push\nGitHub tự render lại + đẩy web trong khoảng 1 phút. Xem lại nhớ Cmd + Shift + R để bỏ cache trình duyệt."
+    "objectID": "HUONG_DAN.html#styles.css-định-dạng",
+    "href": "HUONG_DAN.html#styles.css-định-dạng",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "3.6. styles.css — định dạng",
+    "text": "3.6. styles.css — định dạng\nCopy file styles.css từ repo mẫu (font Newsreader và Source Sans, publication dạng thẻ bo góc, DOI thành nút). Đổi màu nhấn tại dòng --accent: #0d3b66;."
   },
   {
-    "objectID": "HUONG_DAN.html#lấy-doi-tự-động-cho-danh-sách-bài-báo-tùy-chọn",
-    "href": "HUONG_DAN.html#lấy-doi-tự-động-cho-danh-sách-bài-báo-tùy-chọn",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "Nếu đã có ORCID, lấy toàn bộ DOI chính chủ:\ncurl -s -H \"Accept: application/json\" \\\n  \"https://pub.orcid.org/v3.0/0000-0000-0000-0000/works\" \\\n  | grep -o '10\\.[0-9]\\{4,\\}/[^\"]*' | sort -u\nBài nào ORCID thiếu thì tra thêm trên https://search.crossref.org theo tên bài."
+    "objectID": "HUONG_DAN.html#ảnh-chân-dung",
+    "href": "HUONG_DAN.html#ảnh-chân-dung",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "3.7. Ảnh chân dung",
+    "text": "3.7. Ảnh chân dung\nmkdir -p ~/ten-website/assets\ncp ~/Downloads/anh-cua-ban.jpg ~/ten-website/assets/profile.jpg"
   },
   {
-    "objectID": "HUONG_DAN.html#lỗi-thường-gặp",
-    "href": "HUONG_DAN.html#lỗi-thường-gặp",
-    "title": "Hướng dẫn tạo website học thuật cá nhân (Quarto → GitHub Pages)",
-    "section": "",
-    "text": "Hiện tượng\nCách xử lý\n\n\n\n\nWorkflow fail lần đầu, log nói thiếu gh-pages\nLàm bước 4.5 mồi nhánh rồi chạy lại\n\n\nSửa xong web vẫn nội dung cũ\nCache trình duyệt → Cmd+Shift+R hoặc cửa sổ ẩn danh\n\n\nKhối địa chỉ/liên hệ dính thành 1 dòng\nThêm dấu \\ ở cuối mỗi dòng cần ngắt\n\n\nẢnh không hiện\nKiểm tra file nằm đúng assets/profile.jpg và đường dẫn trong index.qmd\n\n\nĐổi theme\nSửa theme: trong _quarto.yml (cosmo, flatly, litera, lux, journal, …)\n\n\n\n\nMọi chỗ ghi USERNAME / ten-website / Họ Tên / email@vidu.com thay bằng thông tin thật."
+    "objectID": "HUONG_DAN.html#đăng-nhập-github-một-lần",
+    "href": "HUONG_DAN.html#đăng-nhập-github-một-lần",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "5.1. Đăng nhập GitHub (một lần)",
+    "text": "5.1. Đăng nhập GitHub (một lần)\ngh auth login\nChọn lần lượt: GitHub.com, HTTPS, Yes, Login with a web browser. Màn hình hiện mã XXXX-XXXX, nhấn Enter để mở trình duyệt, dán mã, chọn Authorize."
+  },
+  {
+    "objectID": "HUONG_DAN.html#file-tự-cập-nhật-.githubworkflowspublish.yml",
+    "href": "HUONG_DAN.html#file-tự-cập-nhật-.githubworkflowspublish.yml",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "5.2. File tự cập nhật .github/workflows/publish.yml",
+    "text": "5.2. File tự cập nhật .github/workflows/publish.yml\nTạo file này để GitHub tự dựng và đẩy web mỗi lần git push:\nname: Publish website\n\non:\n  push:\n    branches: [main]\n  workflow_dispatch:\n\npermissions:\n  contents: write\n\njobs:\n  build-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n      - name: Set up Quarto\n        uses: quarto-dev/quarto-actions/setup@v2\n      - name: Render and publish to gh-pages\n        uses: quarto-dev/quarto-actions/publish@v2\n        with:\n          target: gh-pages\n        env:\n          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
+  },
+  {
+    "objectID": "HUONG_DAN.html#thêm-.gitignore",
+    "href": "HUONG_DAN.html#thêm-.gitignore",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "5.3. Thêm .gitignore",
+    "text": "5.3. Thêm .gitignore\nprintf \"_site/\\n.quarto/\\n\" &gt; ~/ten-website/.gitignore"
+  },
+  {
+    "objectID": "HUONG_DAN.html#tạo-repo-và-đẩy-code-lần-đầu",
+    "href": "HUONG_DAN.html#tạo-repo-và-đẩy-code-lần-đầu",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "5.4. Tạo repo và đẩy code lần đầu",
+    "text": "5.4. Tạo repo và đẩy code lần đầu\ncd ~/ten-website\ngit init -b main\ngit add -A\ngit commit -m \"Initial website\"\ngh repo create ten-website --public --source=. --push"
+  },
+  {
+    "objectID": "HUONG_DAN.html#tạo-nhánh-gh-pages-ban-đầu",
+    "href": "HUONG_DAN.html#tạo-nhánh-gh-pages-ban-đầu",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "5.5. Tạo nhánh gh-pages ban đầu",
+    "text": "5.5. Tạo nhánh gh-pages ban đầu\nLần đầu nhánh gh-pages chưa tồn tại nên workflow sẽ báo lỗi. Tạo nhánh rỗng để khởi tạo:\ngit checkout --orphan gh-pages\ngit rm -rf . &gt;/dev/null 2&gt;&1\necho \"building...\" &gt; index.html\ngit add index.html\ngit commit -m \"Init gh-pages\"\ngit push -u origin gh-pages\ngit checkout main"
+  },
+  {
+    "objectID": "HUONG_DAN.html#bật-github-pages",
+    "href": "HUONG_DAN.html#bật-github-pages",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "5.6. Bật GitHub Pages",
+    "text": "5.6. Bật GitHub Pages\ngh api -X POST repos/USERNAME/ten-website/pages \\\n  -f source[branch]=gh-pages -f source[path]=/ 2&gt;/dev/null || true\nHoặc vào GitHub, repo, Settings, Pages, chọn Source là gh-pages và /(root), rồi Save."
+  },
+  {
+    "objectID": "HUONG_DAN.html#chạy-workflow-để-dựng-bản-thật",
+    "href": "HUONG_DAN.html#chạy-workflow-để-dựng-bản-thật",
+    "title": "Hướng dẫn tạo website học thuật cá nhân",
+    "section": "5.7. Chạy workflow để dựng bản thật",
+    "text": "5.7. Chạy workflow để dựng bản thật\ngh workflow run publish.yml\ngh run watch\nSau khoảng một phút website chạy tại:\nhttps://USERNAME.github.io/ten-website/\nQuay lại _quarto.yml, sửa site-url thành địa chỉ này."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Huan Minh Tran, MD, PhD",
     "section": "",
-    "text": "Postdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine, University of British Columbia.\nMy research studies how air pollution, extreme temperature, and climate variability affect chronic respiratory disease — particularly COPD — from individual lung-function decline to country-level mortality. I work with clinical cohorts, administrative health data, and global ecological analyses."
+    "text": "Respiratory epidemiologist / Climate & air pollution / Environmental health / Biostatistics\nPostdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine, University of British Columbia.\nMy research studies how air pollution, extreme temperature, and climate variability affect chronic respiratory disease — particularly COPD — from individual lung-function decline to country-level mortality. I work with clinical cohorts, administrative health data, and global ecological analyses."
   },
   {
     "objectID": "index.html#research-interests",
