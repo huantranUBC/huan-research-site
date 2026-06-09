@@ -6,6 +6,8 @@ Author names are shown as listed by the source; **bold** marks my own name.
 `[Review]` denotes a review or meta-analysis. DOIs link to the published version.
 Conference abstracts are listed separately.
 
+::: {.publications}
+
 ## Peer-reviewed journal articles
 
 ### 2025
@@ -107,7 +109,4 @@ Conference abstracts are listed separately.
   *Effects of climate-mediated PM2.5 on lung function decline in chronic
   obstructive pulmonary disease.* ISEE Conference Abstracts.
 
-- Nguyen Xuan Huong, Nguyen Tran Anh Vu, Nguyễn Thị Thúy Nga, … Linh Hoang Nguyen
-  Nhat (2022). *Quantification of waste in schools: a case study in Danang City,
-  Vietnam.* ISEE Conference Abstracts.
-  [DOI](https://doi.org/10.1289/isee.2022.o-pk-25)
+:::
