@@ -3,8 +3,8 @@ project:
   output-dir: _site
 
 website:
-  title: "Huan M. Tran"
-  description: "Postdoctoral researcher in respiratory & environmental epidemiology"
+  title: "Huan Minh Tran"
+  description: "Postdoctoral Researcher, Division of Respiratory Medicine, University of British Columbia"
   site-url: "https://huantranUBC.github.io/huan-research-site"   # TODO: replace huantranUBC after first deploy
   navbar:
     left:
@@ -20,9 +20,9 @@ website:
       - icon: github
         href: https://github.com/huantranUBC            # TODO
       - icon: envelope
-        href: "mailto:huantranmyhanh1991@gmail.com"
+        href: "mailto:huan.tran@ubc.ca"
   page-footer:
-    left: "© 2026 Huan M. Tran"
+    left: "© 2026 Huan Minh Tran"
     right: "Built with [Quarto](https://quarto.org)"
 
 format:

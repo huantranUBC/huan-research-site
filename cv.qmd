@@ -5,14 +5,22 @@ title: "Curriculum Vitae"
 <!-- Optionally link a PDF CV: place cv.pdf in assets/ and uncomment below -->
 <!-- [{{< fa file-pdf >}} Download full CV (PDF)](assets/cv.pdf){.btn .btn-outline-primary} -->
 
+## Contact
+
+**Huan Minh Tran, MD, PhD** *(he/him/his)*
+Postdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine
+The University of British Columbia, Vancouver Campus
+2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada
+Phone: +1 236 996 8791 · Email: [huan.tran@ubc.ca](mailto:huan.tran@ubc.ca)
+
 ## Education
 
-- **PhD** — <!-- TODO: field, institution, year -->
-- **MD** — <!-- TODO: institution, year -->
+- **PhD** — Taipei Medical University, Taiwan
+- **MD** — Hue University of Medicine and Pharmacy, Vietnam
 
 ## Appointments
 
-- **Postdoctoral Research Fellow**, University of British Columbia, Canada — 2025–present <!-- TODO confirm start -->
+- **Postdoctoral Researcher**, Division of Respiratory Medicine, Faculty of Medicine, University of British Columbia, Vancouver, Canada
 
 ## Research areas
 

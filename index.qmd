@@ -1,5 +1,5 @@
 ---
-title: "Huan M. Tran, MD, PhD"
+title: "Huan Minh Tran, MD, PhD"
 about:
   template: trestles
   image: assets/profile.jpg          # TODO: add a photo named profile.jpg in assets/
@@ -7,15 +7,20 @@ about:
   links:
     - icon: envelope
       text: Email
-      href: "mailto:huantranmyhanh1991@gmail.com"
+      href: "mailto:huan.tran@ubc.ca"
     - icon: github
       text: GitHub
       href: https://github.com/huantranUBC          # TODO
     - text: "ORCID"
-      href: https://orcid.org/0000-0000-0000-0000   # TODO: your ORCID
+      href: https://orcid.org/0000-0002-6415-8021
     - text: "Google Scholar"
       href: https://scholar.google.com/citations?user=OsfxbQsAAAAJ&hl=en
 ---
+
+*(he / him / his)*
+
+**Postdoctoral Researcher** · Division of Respiratory Medicine, Faculty of
+Medicine · The University of British Columbia, Vancouver Campus
 
 I am a postdoctoral researcher at the **University of British Columbia (UBC)**,
 working at the intersection of **respiratory epidemiology**, **climate and air
@@ -38,4 +43,12 @@ analyses with reproducible statistical pipelines.
 
 ## Current position
 
-- **Postdoctoral Research Fellow**, University of British Columbia <!-- TODO: dept / lab -->
+**Postdoctoral Researcher**
+Division of Respiratory Medicine, Faculty of Medicine
+The University of British Columbia, Vancouver Campus
+
+## Contact
+
+2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada
+Phone: +1 236 996 8791
+Email: [huan.tran@ubc.ca](mailto:huan.tran@ubc.ca)
