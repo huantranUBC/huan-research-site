@@ -126,18 +126,39 @@
     "text": "5.7. Chạy workflow để dựng bản thật\ngh workflow run publish.yml\ngh run watch\nSau khoảng một phút website chạy tại:\nhttps://USERNAME.github.io/ten-website/\nQuay lại _quarto.yml, sửa site-url thành địa chỉ này."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Huan Minh Tran, MD, PhD",
+    "section": "",
+    "text": "Respiratory Medicine / Climate & air pollution / Environmental Epidemiology / Biostatistics\nPostdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine, University of British Columbia.\nMy research studies how air pollution, extreme temperature, and climate variability affect chronic respiratory disease — particularly COPD — from individual lung-function decline to country-level mortality. I work with clinical cohorts, administrative health data, and global ecological analyses."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Huan Minh Tran, MD, PhD",
+    "section": "Research interests",
+    "text": "Research interests\n\nAir pollution, climate, and chronic respiratory disease\nExtreme temperature and humidity effects on COPD\nEosinophilic COPD and susceptibility to particulate air pollution\nCountry-level analyses of climate-related respiratory mortality\nOccupational and environmental exposure\nBiostatistics in R and Quarto"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Huan Minh Tran, MD, PhD",
+    "section": "Contact",
+    "text": "Contact\nDivision of Respiratory Medicine, University of British Columbia\n2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada\nhuan.tran@ubc.ca · +1 236 996 8791"
+  },
+  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, Ha Diep Thi Tran, Linh Nhat Nguyen Hoang, Minh Huy Tran, Tran Nguyen Tuan Minh, Van Long Le, Hsiao-Chi Chuang, Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Chien-Hua Tseng, Chien-Ling Su, Yuan-Chien Lin, Tzu-Tao Chen, Kuan-Yuan Chen, Shu-Chuan Ho, Feng-Ming Yang, Sheng-Ming Wu, Kian Fan Chung, Kin-Fai Ho, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Response to letter to the editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment.\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, Chung Ching Wang, Che-Wei Liang, Chi-Yu Chien, Chih-Hong Pan, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, Jer-Hwa Chang, Li-Te Chang, Ta-Yuan Chang, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Huan Minh Tran, Amja Manullang, Shu-Chuan Ho, Kuan-Yuan Chen, Chien-Hua Tseng, Sheng-Ming Wu, Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, Tzu-Hsuen Yuan, Huan Minh Tran, Firdian Makrufardi, Kian Fan Chung, Kang-Yun Lee, Jer-Hwa Chang, Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, Feng-Jen Tsai, Kuan-Yuan Chen, Shu-Chuan Ho, Chih-Da Wu, Sheng-Ming Wu, Yueh-Lun Lee, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, Supat Wangwongwatana, Ha Phan Ai Nguyen, Dung Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan M Tran, Hanh T M Bui, Somkiat Thoumsang, Ngoc T B Ngo, Nhan P T Nguyen, Hai T M Nguyen, Son M Nguyen, Kunio Hara, Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI\n\n\n\n\n\n\nHuan Minh Tran, Hsiao-Chi Chuang, Amja Manullang, Shu-Chuan Ho, Kang-Yun Lee, Kuan-Yuan Chen, Tzu-Tao Chen, Chien-Hua Tseng, Kian Fan Chung (2024). Increased risk of severity in COPD with eosinophilic inflammation due to air pollution exposure. ERS Congress 2024 Abstracts. DOI\nHuan Minh Tran, Lin-Yuan Chien, Feng-Jen Tsai, Hsiao-Chi Chuang (2023). Effects of climate-mediated PM2.5 on lung function decline in chronic obstructive pulmonary disease. ISEE Conference Abstracts."
+    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, Ha Diep Thi Tran, Linh Nhat Nguyen Hoang, Minh Huy Tran, Tran Nguyen Tuan Minh, Van Long Le, Hsiao-Chi Chuang, Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Chien-Hua Tseng, Chien-Ling Su, Yuan-Chien Lin, Tzu-Tao Chen, Kuan-Yuan Chen, Shu-Chuan Ho, Feng-Ming Yang, Sheng-Ming Wu, Kian Fan Chung, Kin-Fai Ho, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Response to letter to editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment. DOI\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, Chung Ching Wang, Che-Wei Liang, Chi-Yu Chien, Chih-Hong Pan, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, Jer-Hwa Chang, Li-Te Chang, Ta-Yuan Chang, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Huan Minh Tran, Amja Manullang, Shu-Chuan Ho, Kuan-Yuan Chen, Chien-Hua Tseng, Sheng-Ming Wu, Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, Tzu-Hsuen Yuan, Huan Minh Tran, Firdian Makrufardi, Kian Fan Chung, Kang-Yun Lee, Jer-Hwa Chang, Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, Feng-Jen Tsai, Kuan-Yuan Chen, Shu-Chuan Ho, Chih-Da Wu, Sheng-Ming Wu, Yueh-Lun Lee, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, Supat Wangwongwatana, Ha Phan Ai Nguyen, Dung Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan M Tran, Hanh T M Bui, Somkiat Thoumsang, Ngoc T B Ngo, Nhan P T Nguyen, Hai T M Nguyen, Son M Nguyen, Kunio Hara, Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI\n\n\n\n\n\n\nHuan Minh Tran, Hsiao-Chi Chuang, Amja Manullang, Shu-Chuan Ho, Kang-Yun Lee, Kuan-Yuan Chen, Tzu-Tao Chen, Chien-Hua Tseng, Kian Fan Chung (2024). Increased risk of severity in COPD with eosinophilic inflammation due to air pollution exposure. ERS Congress 2024 Abstracts. DOI\nHuan Minh Tran, Lin-Yuan Chien, Feng-Jen Tsai, Hsiao-Chi Chuang (2023). Effects of climate-mediated PM2.5 on lung function decline in chronic obstructive pulmonary disease. ISEE Conference Abstracts."
   },
   {
     "objectID": "publications.html#peer-reviewed-journal-articles",
     "href": "publications.html#peer-reviewed-journal-articles",
     "title": "Publications",
     "section": "",
-    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, Ha Diep Thi Tran, Linh Nhat Nguyen Hoang, Minh Huy Tran, Tran Nguyen Tuan Minh, Van Long Le, Hsiao-Chi Chuang, Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Chien-Hua Tseng, Chien-Ling Su, Yuan-Chien Lin, Tzu-Tao Chen, Kuan-Yuan Chen, Shu-Chuan Ho, Feng-Ming Yang, Sheng-Ming Wu, Kian Fan Chung, Kin-Fai Ho, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025). Response to letter to the editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment.\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, Chung Ching Wang, Che-Wei Liang, Chi-Yu Chien, Chih-Hong Pan, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, Jer-Hwa Chang, Li-Te Chang, Ta-Yuan Chang, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Huan Minh Tran, Amja Manullang, Shu-Chuan Ho, Kuan-Yuan Chen, Chien-Hua Tseng, Sheng-Ming Wu, Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, Tzu-Hsuen Yuan, Huan Minh Tran, Firdian Makrufardi, Kian Fan Chung, Kang-Yun Lee, Jer-Hwa Chang, Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, Feng-Jen Tsai, Kuan-Yuan Chen, Shu-Chuan Ho, Chih-Da Wu, Sheng-Ming Wu, Yueh-Lun Lee, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, Supat Wangwongwatana, Ha Phan Ai Nguyen, Dung Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan M Tran, Hanh T M Bui, Somkiat Thoumsang, Ngoc T B Ngo, Nhan P T Nguyen, Hai T M Nguyen, Son M Nguyen, Kunio Hara, Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI"
+    "text": "Huan Minh Tran, Ting-Wu Chuang, Hanh Thi My Bui, Ha Diep Thi Tran, Linh Nhat Nguyen Hoang, Minh Huy Tran, Tran Nguyen Tuan Minh, Van Long Le, Hsiao-Chi Chuang, Feng-Jen Tsai (2025). Global impact of climate variability and air pollution on age-standardized stroke mortality rates from 2000 to 2020: a country-level analysis. Journal of Environmental Science and Health, Part A. DOI\nHuan Minh Tran, Feng-Jen Tsai, Yuan-Hung Wang, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Chien-Hua Tseng, Chien-Ling Su, Yuan-Chien Lin, Tzu-Tao Chen, Kuan-Yuan Chen, Shu-Chuan Ho, Feng-Ming Yang, Sheng-Ming Wu, Kian Fan Chung, Kin-Fai Ho, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Joint effects of temperature and humidity with PM2.5 on COPD. BMC Public Health. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Corrigendum to “Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis”. Science of the Total Environment. DOI\nHuan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025). Response to letter to editor re: Tran et al. 2024 (Huang et al.). Science of the Total Environment. DOI\n\n\n\n\n\n[Review] Huan Minh Tran, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Extreme temperature increases the risk of COPD morbimortality: a systematic review and meta-analysis. Science of the Total Environment. DOI\nHuan Minh Tran, Ching-Huang Lai, Wei-Liang Chen, Chung Ching Wang, Che-Wei Liang, Chi-Yu Chien, Chih-Hong Pan, Kai-Jen Chuang, Hsiao-Chi Chuang (2024). Effects of occupational exposure to metal fume PM2.5 on lung function and biomarkers among shipyard workers: a 3-year prospective cohort study. International Archives of Occupational and Environmental Health. DOI\n\n\n\n\n\nHuan Minh Tran, Yuan-Chien Lin, Feng-Jen Tsai, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). Short-term mediating effects of PM2.5 on climate-associated COPD severity. Science of the Total Environment. DOI\n[Review] Huan Minh Tran, Feng-Jen Tsai, Yueh-Lun Lee, Jer-Hwa Chang, Li-Te Chang, Ta-Yuan Chang, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Kai-Jen Chuang, Hsiao-Chi Chuang (2023). The impact of air pollution on respiratory diseases in an era of climate change: a review of the current evidence. Science of the Total Environment. DOI\nHuan Minh Tran, Ting-Wu Chuang, Hsiao-Chi Chuang, Feng-Jen Tsai (2023). Climate change and mortality rates of COPD and asthma: a global analysis from 2000 to 2018. Environmental Research. DOI\nTzu-Tao Chen, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, Huan Minh Tran, Amja Manullang, Shu-Chuan Ho, Kuan-Yuan Chen, Chien-Hua Tseng, Sheng-Ming Wu, Hsiao-Chi Chuang (2023). Prediction value of neutrophil and eosinophil count at risk of COPD exacerbation. Annals of Medicine. DOI\nAmja Manullang, Chi-Li Chung, Yueh-Lun Lee, Tzu-Hsuen Yuan, Huan Minh Tran, Firdian Makrufardi, Kian Fan Chung, Kang-Yun Lee, Jer-Hwa Chang, Hsiao-Chi Chuang (2023). COPD with eosinophilic inflammation is susceptible to particulate air pollution exposure. Aerosol and Air Quality Research. DOI\n\n\n\n\n\nHuan Minh Tran, Tzu-Tao Chen, Yueh-Hsun Lu, Feng-Jen Tsai, Kuan-Yuan Chen, Shu-Chuan Ho, Chih-Da Wu, Sheng-Ming Wu, Yueh-Lun Lee, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Hsiao-Chi Chuang (2022). Climate-mediated air pollution associated with COPD severity. Science of the Total Environment. DOI\nHuan Minh Tran, Hanh Thi My Bui, Somkiat Thoumsang, Supat Wangwongwatana, Ha Phan Ai Nguyen, Dung Phung (2022). Health risk assessment of volatile organic compounds exposure among nail salon workers in Vietnam. Human and Ecological Risk Assessment. DOI\n\n\n\n\n\nHuan M Tran, Hanh T M Bui, Somkiat Thoumsang, Ngoc T B Ngo, Nhan P T Nguyen, Hai T M Nguyen, Son M Nguyen, Kunio Hara, Supat Wangwongwatana (2020). Occupational symptoms due to exposure to volatile organic compounds among female Vietnamese nail salon workers in Danang City. Journal of Occupational Health. DOI\nNhan Nguyen, Duong Le Dinh, Man Nguyen Dinh Minh, … Twisuk Punpeng (2020). Noise exposure and its relationship with hypertension among fishermen in Thua Thien Hue Province, Vietnam. Journal of Integrated Community Health. DOI"
   },
   {
     "objectID": "publications.html#conference-abstracts-proceedings",
@@ -145,48 +166,6 @@
     "title": "Publications",
     "section": "",
     "text": "Huan Minh Tran, Hsiao-Chi Chuang, Amja Manullang, Shu-Chuan Ho, Kang-Yun Lee, Kuan-Yuan Chen, Tzu-Tao Chen, Chien-Hua Tseng, Kian Fan Chung (2024). Increased risk of severity in COPD with eosinophilic inflammation due to air pollution exposure. ERS Congress 2024 Abstracts. DOI\nHuan Minh Tran, Lin-Yuan Chien, Feng-Jen Tsai, Hsiao-Chi Chuang (2023). Effects of climate-mediated PM2.5 on lung function decline in chronic obstructive pulmonary disease. ISEE Conference Abstracts."
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Research",
-    "section": "",
-    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
-  },
-  {
-    "objectID": "projects.html#climate-temperature-copd",
-    "href": "projects.html#climate-temperature-copd",
-    "title": "Research",
-    "section": "",
-    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
-  },
-  {
-    "objectID": "projects.html#air-pollution-respiratory-disease",
-    "href": "projects.html#air-pollution-respiratory-disease",
-    "title": "Research",
-    "section": "Air pollution & respiratory disease",
-    "text": "Air pollution & respiratory disease\nPM2.5 and air pollution exposure in chronic respiratory disease, including the heightened susceptibility of eosinophilic COPD and the pathways linking climate and pollution to disease severity."
-  },
-  {
-    "objectID": "projects.html#global-country-level-mortality-analyses",
-    "href": "projects.html#global-country-level-mortality-analyses",
-    "title": "Research",
-    "section": "Global & country-level mortality analyses",
-    "text": "Global & country-level mortality analyses\nCountry-level ecological analyses of how climate variability and air pollution relate to respiratory and stroke mortality worldwide (2000–2020)."
-  },
-  {
-    "objectID": "projects.html#occupational-environmental-exposure",
-    "href": "projects.html#occupational-environmental-exposure",
-    "title": "Research",
-    "section": "Occupational & environmental exposure",
-    "text": "Occupational & environmental exposure\nMetal fume PM2.5 and lung-function decline among shipyard workers; volatile organic compound exposure and respiratory symptoms among nail salon workers in Vietnam."
-  },
-  {
-    "objectID": "projects.html#current-work-at-ubc",
-    "href": "projects.html#current-work-at-ubc",
-    "title": "Research",
-    "section": "Current work at UBC",
-    "text": "Current work at UBC\nEnvironmental epidemiology using large Canadian cohorts — air pollution, wildfire smoke, and the Canadian Longitudinal Study on Aging (CLSA)."
   },
   {
     "objectID": "cv.html",
@@ -231,24 +210,45 @@
     "text": "Skills\n\nStatistical computing: R, Quarto, reproducible pipelines, high-performance computing (Sockeye)\nMethods: epidemiological study design, survival analysis, cohort & case-crossover designs"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Huan Minh Tran, MD, PhD",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Research",
     "section": "",
-    "text": "Respiratory Medicine / Climate & air pollution / Environmental Epidemiology / Biostatistics\nPostdoctoral Researcher, Division of Respiratory Medicine, Faculty of Medicine, University of British Columbia.\nMy research studies how air pollution, extreme temperature, and climate variability affect chronic respiratory disease — particularly COPD — from individual lung-function decline to country-level mortality. I work with clinical cohorts, administrative health data, and global ecological analyses."
+    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
   },
   {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Huan Minh Tran, MD, PhD",
-    "section": "Research interests",
-    "text": "Research interests\n\nAir pollution, climate, and chronic respiratory disease\nExtreme temperature and humidity effects on COPD\nEosinophilic COPD and susceptibility to particulate air pollution\nCountry-level analyses of climate-related respiratory mortality\nOccupational and environmental exposure\nBiostatistics in R and Quarto"
+    "objectID": "projects.html#climate-temperature-copd",
+    "href": "projects.html#climate-temperature-copd",
+    "title": "Research",
+    "section": "",
+    "text": "Effects of extreme temperature, humidity, and climate variability on COPD severity, morbidity, and mortality — spanning individual lung-function decline, mediation analyses, and systematic reviews with meta-analysis."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Huan Minh Tran, MD, PhD",
-    "section": "Contact",
-    "text": "Contact\nDivision of Respiratory Medicine, University of British Columbia\n2635 Laurel Street, Vancouver, BC V5Z 1M9, Canada\nhuan.tran@ubc.ca · +1 236 996 8791"
+    "objectID": "projects.html#air-pollution-respiratory-disease",
+    "href": "projects.html#air-pollution-respiratory-disease",
+    "title": "Research",
+    "section": "Air pollution & respiratory disease",
+    "text": "Air pollution & respiratory disease\nPM2.5 and air pollution exposure in chronic respiratory disease, including the heightened susceptibility of eosinophilic COPD and the pathways linking climate and pollution to disease severity."
+  },
+  {
+    "objectID": "projects.html#global-country-level-mortality-analyses",
+    "href": "projects.html#global-country-level-mortality-analyses",
+    "title": "Research",
+    "section": "Global & country-level mortality analyses",
+    "text": "Global & country-level mortality analyses\nCountry-level ecological analyses of how climate variability and air pollution relate to respiratory and stroke mortality worldwide (2000–2020)."
+  },
+  {
+    "objectID": "projects.html#occupational-environmental-exposure",
+    "href": "projects.html#occupational-environmental-exposure",
+    "title": "Research",
+    "section": "Occupational & environmental exposure",
+    "text": "Occupational & environmental exposure\nMetal fume PM2.5 and lung-function decline among shipyard workers; volatile organic compound exposure and respiratory symptoms among nail salon workers in Vietnam."
+  },
+  {
+    "objectID": "projects.html#current-work-at-ubc",
+    "href": "projects.html#current-work-at-ubc",
+    "title": "Research",
+    "section": "Current work at UBC",
+    "text": "Current work at UBC\nEnvironmental epidemiology using large Canadian cohorts — air pollution, wildfire smoke, and the Canadian Longitudinal Study on Aging (CLSA)."
   }
 ]
