@@ -8,18 +8,25 @@ title: "Publications"
 
 ### 2025
 
-- **Huan Minh Tran**, Ting-Wu Chuang, Hanh Thi My Bui, … Feng-Jen Tsai (2025).
+- **Huan Minh Tran**, Ting-Wu Chuang, Hanh Thi My Bui, Ha Diep Thi Tran, Linh
+  Nhat Nguyen Hoang, Minh Huy Tran, Tran Nguyen Tuan Minh, Van Long Le, Hsiao-Chi
+  Chuang, Feng-Jen Tsai (2025).
   *Global impact of climate variability and air pollution on age-standardized
   stroke mortality rates from 2000 to 2020: a country-level analysis.*
   Journal of Environmental Science and Health, Part A.
   [DOI](https://doi.org/10.1080/10934529.2025.2607921)
 
-- **Huan Minh Tran**, Feng-Jen Tsai, Yuan-Hung Wang, … Hsiao-Chi Chuang (2025).
+- **Huan Minh Tran**, Feng-Jen Tsai, Yuan-Hung Wang, Kang-Yun Lee, Jer-Hwa
+  Chang, Chi-Li Chung, Chien-Hua Tseng, Chien-Ling Su, Yuan-Chien Lin, Tzu-Tao
+  Chen, Kuan-Yuan Chen, Shu-Chuan Ho, Feng-Ming Yang, Sheng-Ming Wu, Kian Fan
+  Chung, Kin-Fai Ho, Kai-Jen Chuang, Hsiao-Chi Chuang (2025).
   *Joint effects of temperature and humidity with PM2.5 on COPD.*
   BMC Public Health.
   [DOI](https://doi.org/10.1186/s12889-025-21564-3)
 
-- **Huan Minh Tran**, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025).
+- **Huan Minh Tran**, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming
+  Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui,
+  Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025).
   *Corrigendum to "Extreme temperature increases the risk of COPD morbimortality:
   a systematic review and meta-analysis".* Science of the Total Environment.
   [DOI](https://doi.org/10.1016/j.scitotenv.2025.178996)
@@ -30,12 +37,15 @@ title: "Publications"
 
 ### 2024
 
-- `[Review]` **Huan Minh Tran**, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang
-  (2024). *Extreme temperature increases the risk of COPD morbimortality: a
+- `[Review]` **Huan Minh Tran**, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang,
+  Feng-Ming Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi
+  My Bui, Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2024).
+  *Extreme temperature increases the risk of COPD morbimortality: a
   systematic review and meta-analysis.* Science of the Total Environment.
   [DOI](https://doi.org/10.1016/j.scitotenv.2024.178087)
 
-- **Huan Minh Tran**, Ching-Huang Lai, Wei-Liang Chen, … Hsiao-Chi Chuang (2024).
+- **Huan Minh Tran**, Ching-Huang Lai, Wei-Liang Chen, Chung Ching Wang, Che-Wei
+  Liang, Chi-Yu Chien, Chih-Hong Pan, Kai-Jen Chuang, Hsiao-Chi Chuang (2024).
   *Effects of occupational exposure to metal fume PM2.5 on lung function and
   biomarkers among shipyard workers: a 3-year prospective cohort study.*
   International Archives of Occupational and Environmental Health.
@@ -43,14 +53,16 @@ title: "Publications"
 
 ### 2023
 
-- **Huan Minh Tran**, Yuan-Chien Lin, Feng-Jen Tsai, … Hsiao-Chi Chuang (2023).
+- **Huan Minh Tran**, Yuan-Chien Lin, Feng-Jen Tsai, Kang-Yun Lee, Jer-Hwa
+  Chang, Chi-Li Chung, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2023).
   *Short-term mediating effects of PM2.5 on climate-associated COPD severity.*
   Science of the Total Environment.
   [DOI](https://doi.org/10.1016/j.scitotenv.2023.166523)
 
-- `[Review]` **Huan Minh Tran**, Feng-Jen Tsai, Yueh-Lun Lee, … Hsiao-Chi Chuang
-  (2023). *The impact of air pollution on respiratory diseases in an era of
-  climate change: a review of the current evidence.*
+- `[Review]` **Huan Minh Tran**, Feng-Jen Tsai, Yueh-Lun Lee, Jer-Hwa Chang,
+  Li-Te Chang, Ta-Yuan Chang, Kian Fan Chung, Han-Pin Kuo, Kang-Yun Lee, Kai-Jen
+  Chuang, Hsiao-Chi Chuang (2023). *The impact of air pollution on respiratory
+  diseases in an era of climate change: a review of the current evidence.*
   Science of the Total Environment.
   [DOI](https://doi.org/10.1016/j.scitotenv.2023.166340)
 
@@ -59,32 +71,38 @@ title: "Publications"
   2000 to 2018.* Environmental Research.
   [DOI](https://doi.org/10.1016/j.envres.2023.116448)
 
-- Tzu-Tao Chen, Kang-Yun Lee, Jer Hwa Chang, … Hsiao-Chi Chuang (2023).
-  *Prediction value of neutrophil and eosinophil count at risk of COPD
-  exacerbation.* Annals of Medicine.
+- Tzu-Tao Chen, Kang-Yun Lee, Jer-Hwa Chang, Chi-Li Chung, **Huan Minh Tran**,
+  Amja Manullang, Shu-Chuan Ho, Kuan-Yuan Chen, Chien-Hua Tseng, Sheng-Ming Wu,
+  Hsiao-Chi Chuang (2023). *Prediction value of neutrophil and eosinophil count
+  at risk of COPD exacerbation.* Annals of Medicine.
   [DOI](https://doi.org/10.1080/07853890.2023.2285924)
 
-- Amja Manullang, Chi-Li Chung, Yueh-Lun Lee, … Hsiao-Chi Chuang (2023).
-  *COPD with eosinophilic inflammation is susceptible to particulate air
-  pollution exposure.* Aerosol and Air Quality Research.
+- Amja Manullang, Chi-Li Chung, Yueh-Lun Lee, Tzu-Hsuen Yuan, **Huan Minh Tran**,
+  Firdian Makrufardi, Kian Fan Chung, Kang-Yun Lee, Jer-Hwa Chang, Hsiao-Chi
+  Chuang (2023). *COPD with eosinophilic inflammation is susceptible to
+  particulate air pollution exposure.* Aerosol and Air Quality Research.
   [DOI](https://doi.org/10.4209/aaqr.230035)
 
 ### 2022
 
-- **Huan Minh Tran**, Tzu-Tao Chen, Yueh-Hsun Lu, … Hsiao-Chi Chuang (2022).
+- **Huan Minh Tran**, Tzu-Tao Chen, Yueh-Hsun Lu, Feng-Jen Tsai, Kuan-Yuan Chen,
+  Shu-Chuan Ho, Chih-Da Wu, Sheng-Ming Wu, Yueh-Lun Lee, Kian Fan Chung, Han-Pin
+  Kuo, Kang-Yun Lee, Hsiao-Chi Chuang (2022).
   *Climate-mediated air pollution associated with COPD severity.*
   Science of the Total Environment.
   [DOI](https://doi.org/10.1016/j.scitotenv.2022.156969)
 
-- **Huan Minh Tran**, Hanh Thi My Bui, Somkiat Thoumsang, … Dung Tri Phung (2022).
+- **Huan Minh Tran**, Hanh Thi My Bui, Somkiat Thoumsang, Supat Wangwongwatana,
+  Ha Phan Ai Nguyen, Dung Phung (2022).
   *Health risk assessment of volatile organic compounds exposure among nail salon
   workers in Vietnam.* Human and Ecological Risk Assessment.
   [DOI](https://doi.org/10.1080/10807039.2022.2044285)
 
 ### 2020
 
-- **Huan Minh Tran**, Hanh T. M. Bui, Somkiat Thoumsang, … Supat Wangwongwatana
-  (2020). *Occupational symptoms due to exposure to volatile organic compounds
+- **Huan M Tran**, Hanh T M Bui, Somkiat Thoumsang, Ngoc T B Ngo, Nhan P T
+  Nguyen, Hai T M Nguyen, Son M Nguyen, Kunio Hara, Supat Wangwongwatana (2020).
+  *Occupational symptoms due to exposure to volatile organic compounds
   among female Vietnamese nail salon workers in Danang City.*
   Journal of Occupational Health.
   [DOI](https://doi.org/10.1002/1348-9585.12160)
@@ -96,7 +114,8 @@ title: "Publications"
 
 ## Conference abstracts & proceedings
 
-- **Huan Minh Tran**, Hsiao-Chi Chuang, Amja Manullang, … Kian Fan Chung (2024).
+- **Huan Minh Tran**, Hsiao-Chi Chuang, Amja Manullang, Shu-Chuan Ho, Kang-Yun
+  Lee, Kuan-Yuan Chen, Tzu-Tao Chen, Chien-Hua Tseng, Kian Fan Chung (2024).
   *Increased risk of severity in COPD with eosinophilic inflammation due to air
   pollution exposure.* ERS Congress 2024 Abstracts.
   [DOI](https://doi.org/10.1183/13993003.congress-2024.pa3123)
