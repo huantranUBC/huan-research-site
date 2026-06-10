@@ -31,9 +31,12 @@ title: "Publications"
   a systematic review and meta-analysis".* Science of the Total Environment.
   [DOI](https://doi.org/10.1016/j.scitotenv.2025.178996)
 
-- **Huan Minh Tran**, Feng-Jen Tsai, Kang-Yun Lee, … Hsiao-Chi Chuang (2025).
-  *Response to letter to the editor re: Tran et al. 2024 (Huang et al.).*
+- **Huan Minh Tran**, Feng-Jen Tsai, Kang-Yun Lee, Yuan-Hung Wang, Feng-Ming
+  Yang, Shu-Chuan Ho, Hanh Thi My Bui, Linh Nhat Nguyen Hoang, Linh Thi My Bui,
+  Kin-Fai Ho, Kian Fan Chung, Kai-Jen Chuang, Hsiao-Chi Chuang (2025).
+  *Response to letter to editor re: Tran et al. 2024 (Huang et al.).*
   Science of the Total Environment.
+  [DOI](https://doi.org/10.1016/j.scitotenv.2025.179107)
 
 ### 2024
 
